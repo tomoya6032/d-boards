@@ -1,8 +1,7 @@
-class ToppageController < ApplicationController
-
+class ArticlesController < ApplicationController
 
    def index
-     # render 'toppage/index'
+
 
    end
 
@@ -36,11 +35,9 @@ class ToppageController < ApplicationController
 
    end
 
-
    def destroy
 
 
    end
-
 
 end
