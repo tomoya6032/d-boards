@@ -1,0 +1,4 @@
+class Lecture < ApplicationRecord
+    
+
+end
