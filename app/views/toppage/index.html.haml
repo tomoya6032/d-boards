@@ -1,1 +1,36 @@
-%h1 topページだよ
+.top_page 
+  .container
+    %h2 TOPページ 
+    
+    -# - @articles.each do |board|
+    -#   = render 'commons/board', board: board 
+
+    -# - @chats.each do |board|
+    -#   = render 'commons/board', board: board
+
+    -# - @informations.each do |board|
+    -#   = render 'commons/board', board: board
+
+    -# - @lectures.each do |board|
+    -#   = render 'commons/board', board: board    
+    
+.container 
+  %h3 articles
+
+
+  %h3 chats
+
+
+  %h3 informations
+
+
+  %h3 lectures
+
+
+  
+
+
+-#   .new_board_container
+-#     = link_to new_board_path do
+-#       .board_new
+-#         %p + Add new board
