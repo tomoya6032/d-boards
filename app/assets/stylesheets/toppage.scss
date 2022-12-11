@@ -2,3 +2,42 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
 
+.top_page  {
+    width: 100%;
+}
+
+.container {
+    background-color: #f5f5f5;
+    margin: 16px 16px;
+    // padding: $container-padding $container-padding;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+    position: relative;
+   
+   
+   
+    h2 {
+     width: 100%;
+     padding-left: 20px;
+     
+    }
+
+   
+}
+
+
+.section_container {
+    background-color: #f5f5f5;
+    margin: 16px 16px;
+    height: 100px;
+    // padding: $container-padding $container-padding;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+    position: relative;
+
+    h3 {
+      padding-left: 20px;
+      padding-top: 35px;
+
+
+    }
+   
+ }
