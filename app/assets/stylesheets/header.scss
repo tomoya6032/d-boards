@@ -9,7 +9,7 @@ $back-icon-size: 16px;
 .header {
   display: flex;
   justify-content: space-between;
-  background-color: $primary-color;
+  background-color: #FFCC99;
   padding: $header-padding-y 8px;
   font-weight: bold;
 
@@ -20,12 +20,12 @@ $back-icon-size: 16px;
 
   &_loginBtn {
     background-color: $base-bg-color;
-    height: $avatar-size;
+    height: 40px;
     border-radius: 8px;
-    font-size: 12px;
+    font-size: 18px;
     text-align:center;
-    line-height:0px;
-    padding: 10px 14px;
+    line-height:40px;
+    padding: 10px 18px;
     color: $primary-color;
   }
 
@@ -35,6 +35,8 @@ $back-icon-size: 16px;
     display: flex;
     width: 100%;
     padding-right: 10px;
+    padding-bottom: 5px;
+    align-items: flex-end;
     justify-content: space-between;
 
 
@@ -45,18 +47,29 @@ $back-icon-size: 16px;
       margin: ($avatar-size - $back-icon-size) / 2 8px 0;
     }
   }
-
-
-  &_pageTitle {
-    color: white;
-    line-height: $avatar-size;
-    font-size: $font-lg;
+ 
+  &_pagetitle {
+      text-align:center;
+      margin : 5px ;
+      
+      padding : 10px;
+      line-height : 10px;
+      border-radius: 8px;
+      background-color: white;
+    
   }
+    &_pagetitle {
+      color: #FFCC99;
+      // line-height: 50px;
+      font-size: 20px;
+      padding-left: 20px;
+      padding-right: 20px;
+    }
 
-  &_avatar {
-    width: $avatar-size;
-    height: $avatar-size;
-    border-radius: 100%;
+    &_avatar {
+      width: $avatar-size;
+      height: $avatar-size;
+      border-radius: 100%;
 
   }
 }
