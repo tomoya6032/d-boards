@@ -15,18 +15,19 @@
  */
 
 
-// @import 'header';
+@import 'header';
 // @import 'tabs';
-// @import './variables';
+@import './variables';
 // @import 'common';
 // @import 'card';
-// @import 'articles';
+@import 'toppage';
 @import 'chats';
 @import 'comments';
 // @import 'flash';
 @import 'informations';
 @import 'profiles';
 @import 'lectures';
+@import 'buttons';
 
 
 
@@ -53,22 +54,21 @@ body {
     color: #000000;
 }
 
-// a {
-//     text-decoration: none;
-//     color: $text-base-color;
+a {
+    text-decoration: none;
+    color: $text-base-color;
     
-// }
+}
 
 
-// a {
-//     text-decoration: none;
-//     color: #000000;
-//   }
+a {
+    text-decoration: none;
+    color: #000000;
+  }
   
   .container {
     padding: 16px 16px;
-    width: 100%;
-    
+  //   width: 100%;  
   }
   
   .field {
