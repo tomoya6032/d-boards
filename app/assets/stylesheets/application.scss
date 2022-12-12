@@ -97,11 +97,16 @@ a {
   }
 
 footer {
-  padding: 20px;
+  padding: 15px 0 15px 0;
   width: 100%;
   background-color: white;
   font-size: 1em;
   color: #000000;
   
+  &_content {
+    position: absolute;/*←絶対位置*/
+    bottom: 0; /*下に固定*/
+  }
+
 }
    
