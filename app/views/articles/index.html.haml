@@ -1,8 +1,8 @@
 .articles 
   .container
     %h2 記事一覧
-    -# - @articles.each do |article|
-    -#   = render 'commons/article', board: board 
+    - @articles.each do |article|
+      = render 'commons/article', article: article 
 
   .new_article_container
     = link_to new_article_path do

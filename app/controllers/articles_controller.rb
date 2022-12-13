@@ -1,7 +1,7 @@
 class ArticlesController < ApplicationController
 
    def index
-
+     @articles = Article.all
 
    end
 
@@ -13,7 +13,7 @@ class ArticlesController < ApplicationController
 
 
    def new
-
+      # @article = current_user.articles.build
 
    end
 
