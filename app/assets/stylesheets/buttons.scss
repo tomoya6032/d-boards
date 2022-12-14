@@ -1,11 +1,11 @@
-@import './variables';
+// @import './variables';
 
 .btn-primary {
     background-color: rgb(255, 196, 0);
     border: none;
-    width: 100%;
+    width: 90%;
     text-align: center;
-    color: $primary-color;
+    color: red;
     padding: 16px 0;
     font-weight: bold;
     // clear: both;
@@ -16,10 +16,10 @@
 .btn-secondary {
     background-color: rgb(255, 196, 0);
     margin: 0 auto;
-    border: solid 1px $primary-color;
+    border: solid 1px blue;
     width: 90%;
     text-align: center;
-    color: $primary-color;
+    color: green;
     padding: 12px 0;
     font-weight: bold;
     // clear: both;
