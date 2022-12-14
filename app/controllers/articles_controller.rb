@@ -13,6 +13,7 @@ class ArticlesController < ApplicationController
 
 
    def new
+      @article = Article.new
       # @article = current_user.articles.build
 
    end
