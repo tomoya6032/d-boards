@@ -15,5 +15,11 @@ class Article < ApplicationRecord
     has_many :likes, dependent: :destroy
     belongs_to :user
 
-    
+    private
+    def validate_title_and_content_length
+      char_count = self.title.length + self.content.length
+      errors.add(:content, '10文字以上必要です')unless char_count > 10
+    end
+
+
 end

@@ -1,50 +1,61 @@
 class ArticlesController < ApplicationController
 
-   def index
-     @articles = Article.all
+  before_action :set_article, only: [:show]
+  before_action :authenticate_user!, only: [:new, :create, :edit, :update, :destroy]
 
-   end
+    def index
+      @articles = Article.all
 
-
-   def show
-
-
-   end
+    end
 
 
-   def new
-      @article = Article.new
-      # @article = current_user.articles.build
+    def show
+      # @article = Article.find(params[:id])
 
-   end
-
-
-   def create
-   #    @article = current_user.articles.build(article_params)
-   #   if @article.save
-   #     redirect_to article_path(@article), notice: '保存ができたよ'
-   #   else
-   #     flash.now[:error] = '保存に失敗しました'
-   #     render :new
-   #   end
-
-   end
+    end
 
 
-   def edit
+    def new
+      # @article = Article.new
+      @article = current_user.articles.build
+
+    end
 
 
-   end
+    def create
+      @article = current_user.articles.build(article_params)
+      if @article.save
+        redirect_to article_path(@article), notice: '保存ができたよ'
+      else
+        flash.now[:error] = '保存に失敗しました'
+        render :new
+      end
+    end
 
 
-   def update
+    def edit
 
 
-   end
-
-   def destroy
+    end
 
 
-   end
+    def update
+
+
+    end
+
+    def destroy
+
+
+    end
+
+    private
+    def article_params
+      params.require(:article).permit(:title, :content, :eyecatch)
+    end
+
+    def set_article
+      @article = Article.find(params[:id])
+    end
 
 end
