@@ -1,6 +1,6 @@
 class ProfilesController < ApplicationController
 
-
+   before_action :authenticate_user!
 
    def index
 
@@ -42,6 +42,18 @@ class ProfilesController < ApplicationController
   
   
    end
+
+   def profile_params
+     params.require(:profile).permit(
+         :nickname,
+         :introduction,
+         :gender,
+         :birthday,
+         :subscribed,
+         :avatar
+     )
+   end
+
   
 
 
