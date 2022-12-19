@@ -13,14 +13,14 @@
     %header.header
       .header_logos
         -# - if !current_page?(root_path)
-        -#   = link_to :back do
-        -#     = image_tag 'back.svg', class: 'header_back'
+          -#   = link_to :back do
+          -#     = image_tag 'back.svg', class: 'header_back'
         .header_pagetitle
-          %p.pagetitle
+          .pagetitle
             = link_to 'Boards', root_path
         - if user_signed_in?
           .dropdown
-            -# = image_tag current_user.avatar_image, class: 'header_avatar dropbtn'
+            = image_tag current_user.avatar_image, class: 'header_avatar dropbtn'
             .dropdown-content
               = link_to 'プロフィール', profile_path
               -# = link_to 'お気に入り', favorites_path
