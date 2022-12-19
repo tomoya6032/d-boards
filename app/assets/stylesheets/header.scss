@@ -50,10 +50,10 @@ $back-icon-size: 16px;
  
   &_pagetitle {
       text-align:center;
-      margin : 5px ;
+      margin : 20px ;
       
-      padding : 10px;
-      line-height : 10px;
+      padding : 20px;
+      line-height : 20px;
       border-radius: 8px;
       background-color: white;
     
@@ -67,8 +67,8 @@ $back-icon-size: 16px;
     }
 
     &_avatar {
-      width: $avatar-size;
-      height: $avatar-size;
+      width: 50px;
+      height: 50px;
       border-radius: 100%;
 
   }
@@ -89,6 +89,6 @@ $back-icon-size: 16px;
 }
 
 .dropdown img {
-  height: 30px;
-  width: 30px;
+  height: 40px;
+  width: 40px;
 }
