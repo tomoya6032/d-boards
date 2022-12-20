@@ -1,7 +1,7 @@
 @import 'variables';
 
 $avatar-size: 40px;
-$header-padding-y: 16px;
+$header-padding-y: 8px;
 $back-icon-size: 16px;
 
 
@@ -12,6 +12,7 @@ $back-icon-size: 16px;
   background-color: #FFCC99;
   padding: $header-padding-y 8px;
   font-weight: bold;
+  // height: 40px;
 
   a {
     color: black;
@@ -50,10 +51,9 @@ $back-icon-size: 16px;
  
   &_pagetitle {
       text-align:center;
-      margin : 20px ;
-      
-      padding : 20px;
-      line-height : 20px;
+      margin: 10px;
+      padding: 20px;
+      line-height: 20px;
       border-radius: 8px;
       background-color: white;
     
@@ -70,15 +70,14 @@ $back-icon-size: 16px;
       width: 50px;
       height: 50px;
       border-radius: 100%;
+      // margin-bottom: 60px;
 
   }
 }
 
-.dropdown {
+.dropdown a {
   color: black;
   text-align:center;
-  
- 
   background-color: $base-bg-color;
   border-radius: 8px;
   font-size: 14px;
@@ -89,6 +88,11 @@ $back-icon-size: 16px;
 }
 
 .dropdown img {
-  height: 40px;
-  width: 40px;
+  
+  height: 60px;
+  width: 60px;
+}
+
+.dropdown {
+  margin-bottom: 42px;
 }

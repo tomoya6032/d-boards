@@ -120,33 +120,40 @@ footer {
 
 .dropbtn {
   border: none;
-
+  width: 10px;
 }
+
+// .dropdown:hover .dropbtn {
+//   display: block;
+//   top: 0px; //ホバーでドロップダウンメニューが表示される位置を決めている
+// }
 
 .dropdown {
   position: relative;
   display: inline-block;
   height: 40px;
   border-radius: 20px;
-  
+  // margin-bottom: 0;
+  // padding-bottom: 0;
+  bottom: 0;
 }
 
 .dropdown-content {
-  font-weight: normal;
-  display: none;
-  right: 0;
-  position: absolute;
-  background-color: white;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-  z-index: 1;
-  border-radius: 20px;
+    font-weight: normal;
+    display: none;
+    right: 0;
+    position: absolute;
+    background-color: white;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    border-radius: 20px;
 
-  &.mini {
-      padding-top: 0;
-      min-width: 100px;
-      
-  }
+    &.mini {
+        top: 0px;
+        min-width: 100px;
+        
+    }
 }
 
 .dropdown-content a {
@@ -158,9 +165,10 @@ footer {
 
 .dropdown-content a:hover {
   background-color: rgb(84, 245, 111);
-  border-radius: 20px;
+  border-radius: 10px;
 }
 
 .dropdown:hover .dropdown-content {
   display: block;
+  top: 70px; //ホバーでドロップダウンメニューが表示される位置を決めている
 }
