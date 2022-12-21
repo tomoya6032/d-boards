@@ -1,8 +1,9 @@
 // @import './variables';
 
 .btn-primary {
-    background-color: rgb(84, 245, 111);
+    background-color: #f4999d;
     border: none;
+    border-radius: 20px;
     width: 100%;
     text-align: center;
     color: rgb(246, 246, 246);
@@ -15,12 +16,12 @@
 
 
 .btn-secondary {
-    background-color: rgb(255, 196, 0);
+    background-color: rgb(176, 194, 244);
     margin: 0 auto;
-    border: solid 1px blue;
+    border-radius: 20px;
     width: 90%;
     text-align: center;
-    color: green;
+    color: white;
     padding: 12px 0;
     font-weight: bold;
     // clear: both;

@@ -7,21 +7,25 @@
         height: 100%;
         width: 80%;
         margin: 8px 8px;
-        padding: 16px 24px;
+        padding: 16px px;
         border: 2px solid #EBEBEB;
       }
     }
     
     label {
-      font-size: 12px;
+      font-size: 18px;
+      background-color: #e7f5d4;
+      padding: 16px 40px;
+      border-radius: 20px;
     }
     
   
     textarea {
       width: 90%;
-      margin: 8px 8px;
+      margin: 25px 8px;
       padding: 8px 8px;
       min-height: 440px;
+      border-radius: 20px;
       resize: vertical;
       border: 1px solid #EBEBEB;
     }
