@@ -1,6 +1,6 @@
 class CommentsController < ApplicationController
-
-
+ 
+#  before_action :authenticate_user!, only: [:new, :create, :edit, :update, :destroy]
 
    def index
      
@@ -9,8 +9,8 @@ class CommentsController < ApplicationController
   
   
    def show
-  
-  
+      @comment = @article.comments
+      @comments = Comment.find_by(id: params[:id])
    end
   
   

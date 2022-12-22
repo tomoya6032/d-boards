@@ -8,6 +8,7 @@ class User < ApplicationRecord
   has_many :likes,dependent: :destroy
   has_many :favorite_articles, through: :likes, source: :article
   has_one :profile, dependent: :destroy
+  has_one_attached :avatar
 
   def has_written?(article)
     articles.exists?(id: article.id)
@@ -28,5 +29,6 @@ class User < ApplicationRecord
       'default-avatar.png'
     end
   end
+  
 
 end

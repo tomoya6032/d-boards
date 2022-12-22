@@ -31,8 +31,9 @@
   
 .article 
   %h2 コメント一覧
-  - @comments.each do |comment|
+  - @comment.each do |comment|
     .article_comment
+      = image_tag comment.comment_image
       %p= comment.content
 
 .container
