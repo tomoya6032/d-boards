@@ -28,6 +28,14 @@ class Article < ApplicationRecord
       likes.count
     end
 
+    def avatar_image
+      if profile&.avatar&.attached?
+        profile.avatar
+      else
+        'default-avatar.png'
+      end
+    end
+
 
     private
     def validate_title_and_content_length
