@@ -46,8 +46,11 @@ ActiveRecord::Schema.define(version: 2022_12_19_213713) do
   end
 
   create_table "chats", force: :cascade do |t|
+    t.bigint "user_id", null: false
+    t.text "content", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.index ["user_id"], name: "index_chats_on_user_id"
   end
 
   create_table "comments", force: :cascade do |t|
@@ -69,6 +72,12 @@ ActiveRecord::Schema.define(version: 2022_12_19_213713) do
   end
 
   create_table "likes", force: :cascade do |t|
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "messages", force: :cascade do |t|
+    t.text "content"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
