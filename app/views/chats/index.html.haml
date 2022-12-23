@@ -1,1 +1,20 @@
 %h1 chat一覧を表示しているぞ
+-# %h1 Chat room
+-# - @chats.each do |chat|
+-#   = render 'message', chat: chat
+
+-# %form
+-#   %label Say something:
+-#   %br/
+-#   %input{"data-behavior" => "room_speaker", type: "text"}/
+
+%h3 mini-talk-app
+= form_with(model: @chat) do |f| 
+  = f.text_field :text 
+  = f.submit '送信' 
+    
+.messages
+- @chats.each do |chat|
+  %p= chat.id 
+  %p= chat.text
+   
