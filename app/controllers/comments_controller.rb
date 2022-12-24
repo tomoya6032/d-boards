@@ -1,9 +1,9 @@
 class CommentsController < ApplicationController
- 
+   before_action :set_comment, only: [:show]
 #  before_action :authenticate_user!, only: [:new, :create, :edit, :update, :destroy]
 
    def index
-     
+   #   @comments = Comment.all     
 
    end
   
@@ -56,6 +56,10 @@ class CommentsController < ApplicationController
    private
    def comment_params
      params.require(:comment).permit(:content)
+   end
+
+   def set_article
+     @comment = Comment.find(params[:id])
    end
 
 end

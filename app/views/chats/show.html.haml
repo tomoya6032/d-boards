@@ -1,4 +1,15 @@
+.chat
+  .chat_contaner
 
--# %h1 Chat room!
--# - @chats.each do |chat|
--#  = render 'message', chat: chat
+    
+    %p= @chat.content
+   
+    %p= @chat.display_created_at
+   
+    - if user_signed_in? && current_user.has_written?(@chat)
+      .chat_detail_actions
+        .dropdown
+          = image_tag 'actions.svg', class: 'dropbtn'
+          .dropdown-content.mini
+            = link_to '編集する', edit_chat_path(@chat)
+            = link_to '削除する', chat_path(@chat), data: { method: 'delete', confirm: '本当に削除してもよろしいですか？' }
