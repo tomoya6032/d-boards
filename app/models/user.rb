@@ -9,6 +9,7 @@ class User < ApplicationRecord
   has_many :favorite_articles, through: :likes, source: :article
   has_one :profile, dependent: :destroy
   has_many :comments, dependent: :destroy
+  has_many :chats, dependent: :destroy
   has_one_attached :avatar
 
   def has_written?(article)

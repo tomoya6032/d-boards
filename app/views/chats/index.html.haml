@@ -1,20 +1,11 @@
-%h1 chat一覧を表示しているぞ
--# %h1 Chat room
--# - @chats.each do |chat|
--#   = render 'message', chat: chat
+.chats
+  .chats_container
+    %h2 chat一覧を表示しているぞ
 
--# %form
--#   %label Say something:
--#   %br/
--#   %input{"data-behavior" => "room_speaker", type: "text"}/
+    - @chats.each do |chat|
+      = render 'commons/chat', chat: chat 
 
-%h3 mini-talk-app
-= form_with(model: @chat) do |f| 
-  = f.text_field :text 
-  = f.submit '送信' 
-    
-.messages
-- @chats.each do |chat|
-  %p= chat.id 
-  %p= chat.text
-   
+  .new_chat_container
+    = link_to new_chat_path do
+      .chat_new
+        %p + 新しいチャットを作成

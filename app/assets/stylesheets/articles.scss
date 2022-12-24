@@ -2,22 +2,12 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
 
-.article_new {
-    color: #FFFFFF;
-    font-size: 24px;
-    font-weight: bold;
-    color: #000;
-    cursor: pointer;
-    margin: 20px 20px 20px 20px;
-    padding: 20px;
-    // width: 90%;
-    height: 80px;
-    border-style: dotted;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    // position: absolute;
-    // bottom: 10px;
+
+
+.articles_container {
+  &_h2 {
+    margin-left: 20px;
+  }
 }
 
 .article {
@@ -47,6 +37,7 @@
   
     h2 {
       font-size: 16px;
+
     }
   
     &_title {
@@ -97,7 +88,10 @@
       }
     }
   }
+
+
   
+  //ここからしたは意味のないCSS？
 .boards {
   position: relative;
   padding-bottom: 100px;
