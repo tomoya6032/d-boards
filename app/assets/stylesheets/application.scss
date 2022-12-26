@@ -99,15 +99,16 @@ a {
     font-size: 18px;
     margin: 20px 20px;
     padding: 16px 16px;
-    width: 90%;
+    width: 80%;
     background: #F8BD1C;
-    border-radius: 4px;
+    border-radius: 1px;
     position: fixed;
     bottom: 0;
   }
 
 .login_container  {
   width: 80%;
+  margin-left: 10px;
 }
 
 // .footer {
@@ -125,10 +126,12 @@ a {
 // }
    
 
-.dropbtn {
-  border: none;
-  width: 100px;
-}
+// .img {
+//    dropbtn {
+//      border: none;
+//      width: 20px;
+//    }
+// }
 
 // .dropdown:hover .dropbtn {
 //   display: block;

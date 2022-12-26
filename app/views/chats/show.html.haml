@@ -1,14 +1,17 @@
 .chat
   .chat_contaner
-
-    %p= @chat.content
+    .chat_detail
+      = image_tag @chat.user.avatar_image
+    .div
+      %p= @chat.author_name
+      %p= @chat.display_created_at
+    .chat_content_container
+      %p= @chat.content
    
-    %p= @chat.display_created_at
-   
-    - if user_signed_in? && current_user.has_written?(@chat)
-      .chat_detail_actions
-        .dropdown
-          = image_tag 'actions.svg', class: 'dropbtn'
-          .dropdown-content.mini
-            = link_to '編集する', edit_chat_path(@chat)
-            = link_to '削除する', chat_path(@chat), data: { method: 'delete', confirm: '本当に削除してもよろしいですか？' }
+  - if user_signed_in? && current_user.has_written?(@chat)
+    .chat_detail_actions
+      .dropdown
+        = image_tag 'actions.svg', class: 'dropbtn'
+        .dropdown-content.mini
+          = link_to '編集する', edit_chat_path(@chat)
+          = link_to '削除する', chat_path(@chat), data: { method: 'delete', confirm: '本当に削除してもよろしいですか？' }
