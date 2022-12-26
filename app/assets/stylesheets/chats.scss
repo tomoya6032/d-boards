@@ -28,11 +28,11 @@
     position: relative;
     border-radius: 30px;
   
-     &_image {
-       height: 180px;
-       position: relative;
-       overflow: hidden;
-       margin: 22px * -1 22px *-1 16px;
+    //  &_image {
+    //    height: 180px;
+    //    position: relative;
+    //    overflow: hidden;
+    //    margin: 22px * -1 22px *-1 16px;
      
        img {
          position: absolute;
@@ -42,7 +42,7 @@
          -ms-transform: translate(-50%, -50%);
          transform: translate(-50%, -50%);
          width: 100%;
-       }
+      //  }
      }
   
      p {
@@ -55,7 +55,7 @@
       display: flex;
       font-size: 12px;
       position: relative;
-      margin-left: 20px;
+      margin-left: 0;
   
       img {
         cursor: pointer;
@@ -63,6 +63,7 @@
         height: 40px;
         border-radius: 100%;
         margin-left: 16px;
+        position: absolute;
       }
   
       &_actions {
@@ -75,6 +76,10 @@
         size: 50%;
       }
     }
+
+    // &_div {
+    //   position: absolute;
+    // }
   
     &_content {
       padding: 24px 0 32px;
@@ -101,3 +106,7 @@
          height: 40px;
        }
 } 
+
+.chat_container {
+
+}
