@@ -5,9 +5,9 @@
     .div
       %p= @chat.author_name
       %p= @chat.display_created_at
-    .chat_content_container
-      %p= @chat.content
-   
+  .chat_content_container
+    %p= @chat.content
+    
   - if user_signed_in? && current_user.has_written?(@chat)
     .chat_detail_actions
       .dropdown
