@@ -4,7 +4,7 @@ class Comment < ApplicationRecord
     # belongs_to :profile
     has_one_attached :avatar
     validates :content, presence: true
-
+   
 
     def avatar_image
       if profile&.avatar&.attached?

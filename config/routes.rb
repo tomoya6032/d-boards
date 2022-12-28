@@ -13,7 +13,9 @@ Rails.application.routes.draw do
 
   resources :lectures, only: [:index, :new, :show, :edit, :create, :update, :destroy]
   resources :informations, only: [:index, :new, :show, :edit, :create, :update, :destroy]
-  resources :chats, only: [:index, :new, :show, :edit, :create, :update, :destroy]
+  resources :chats do
+    resources :replys, only: [:index, :new, :show, :edit, :create, :update, :destroy]
+  end
   resources :favorites, only: [:index]
   resource :profile, only: [:show, :edit, :update]
   
