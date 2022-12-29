@@ -26,7 +26,7 @@ class ReplysController < ApplicationController
         chat = Chat.find(params[:chat_id])
         @reply = chat.replys.build(reply_params)
         if @reply.save
-            redirect_to chat_path(chat), notice: 'コメントを追加' 
+            redirect_to chat_path(chat), notice: '返信を追加' 
         else
         flash.now[:error] = '更新できませんでした'
         render :new
@@ -54,7 +54,7 @@ class ReplysController < ApplicationController
 
     private
     def reply_params
-      params.require(:comment).permit(:content, :chat_id, :user_id, :parent_id)
+      params.require(:reply).permit(:content, :chat_id, :user_id, :parent_id)
     end
 
     def set_chat

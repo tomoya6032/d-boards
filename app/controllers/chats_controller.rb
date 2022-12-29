@@ -8,7 +8,7 @@ class ChatsController < ApplicationController
  
  
    def show
-    
+    @reply = @chat.replys
  
    end
  
@@ -39,6 +39,13 @@ class ChatsController < ApplicationController
  
  
    def update
+     @chat = current_user.chats.find(params[:id])
+     if @chat.update(chat_params)
+       redirect_to chat_path(@chat),notice: '更新できました'
+     else
+       flash.now[:error] = '更新できませんでした'
+       render :edit
+     end
  
  
    end
