@@ -6,19 +6,28 @@
     .div
       %p= @chat.author_name
       %p= @chat.display_created_at
-      - if user_signed_in? && current_user.has_written?(@chat)
-        .chat_detail_actions
-          .dropdown
-            = image_tag 'actions.svg', class: 'dropbtn'
-            .dropdown-content.mini
-              = link_to '編集する', edit_chat_path(@chat)
-              = link_to '削除する', chat_path(@chat), data: { method: 'delete', confirm: '本当に削除してもよろしいですか？' }
+    - if user_signed_in? && current_user.has_written?(@chat)
+      .chat_detail_actions
+        .dropdown
+          = image_tag 'actions.svg', class: 'dropbtn'
+          .dropdown-content.mini
+            = link_to '編集する', edit_chat_path(@chat)
+            = link_to '削除する', chat_path(@chat), data: { method: 'delete', confirm: '本当に削除してもよろしいですか？' }
 
 
   
   .chat_content_container
     %p= @chat.content
     
-  
+  .chat_reply_container 
+    = link_to new_chat_reply_path(@chat) do
+      返信する
     
+.reply
+  %h2 返信一覧
+  - @reply.each do |reply|
+    .chat_reply
+      -# = image_tag comment.user.avatar_image
+      %p= reply.content
+
   
