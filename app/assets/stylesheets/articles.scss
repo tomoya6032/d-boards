@@ -199,18 +199,21 @@
 .article_comment {
   background-color: rgb(240, 236, 236);
   border-radius: 20px;
-  height: 30px;
+  height: 100%;
   margin-top: 10px;
   display: flex;
   p {
     padding-left: 10px;
-    line-height: 5px;
+    // line-height: 5px;
     
   }
  
   img {
-    padding-left: 30px;
+    padding: 10px;
+    width: 30px;
     height: 30px;
+    border-radius: 100px;
+    
   }
 }
 

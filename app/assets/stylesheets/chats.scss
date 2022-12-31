@@ -209,13 +209,13 @@
     }
   }
 
-  &_content {
+  // &_content {
     // padding: 6px 0;
   //  min-height: 100px;
   //  p {
   //    white-space: pre-wrap;
   //  }
-  }
+  // }
 
   &_heart {
     position: absolute;
@@ -232,17 +232,20 @@
 .chat_reply {
   background-color: rgb(240, 236, 236);
   border-radius: 20px;
-  // height: 200px;
+  height: 100%;
   margin-top: 10px;
   display: flex;
   p {
-    padding-left: 12px;
+    padding-left: 10px;
     // line-height: 5px;
     
   }
  
   img {
-    padding-left: 30px;
+    padding: 10px;
+    width: 30px;
     height: 30px;
+    border-radius: 100px;
+    
   }
 }
