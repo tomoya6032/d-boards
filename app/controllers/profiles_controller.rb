@@ -1,6 +1,7 @@
 class ProfilesController < ApplicationController
+    # before_action :set_profile, only: [:show]
     before_action :authenticate_user!
-
+ 
     def index
       
 
@@ -9,7 +10,8 @@ class ProfilesController < ApplicationController
     
     def show
       @profile = current_user.profile
-    
+      # @profiles = user.profile
+
     end
     
     
@@ -60,5 +62,9 @@ class ProfilesController < ApplicationController
           :avatar
       )
     end
+
+    # def set_profile
+    #   @profile = Profile.find(params[:id])
+    # end
   
 end
