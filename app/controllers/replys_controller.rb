@@ -24,7 +24,7 @@ class ReplysController < ApplicationController
     
     def create
         chat = Chat.find(params[:chat_id])
-        @reply = chat.replys.build(reply_params)
+        @reply = chat.replys.build(reply_params.merge!(user_id: current_user.id))
         if @reply.save
             redirect_to chat_path(chat), notice: '返信を追加' 
         else
