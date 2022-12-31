@@ -54,7 +54,7 @@ class ReplysController < ApplicationController
 
     private
     def reply_params
-      params.require(:reply).permit(:content, :chat_id, :user_id, :parent_id)
+      params.require(:reply).permit(:content, :chat_id, :user_id)
     end
 
     def set_chat

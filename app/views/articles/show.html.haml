@@ -36,7 +36,7 @@
   %h2 コメント一覧
   - @comment.each do |comment|
     .article_comment
-      -# = image_tag comment.user.avatar_image
+      -# = image_tag @comment.user.avatar_image
       %p= comment.content
 
 .container
