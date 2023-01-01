@@ -10,6 +10,7 @@ class User < ApplicationRecord
   has_one :profile, dependent: :destroy
   has_many :comments, dependent: :destroy
   has_many :chats, dependent: :destroy
+  has_many :informations, dependent: :destroy
   has_one_attached :avatar, dependent: :destroy
 
   def has_written?(article)
