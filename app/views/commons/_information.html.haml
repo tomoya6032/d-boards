@@ -1,0 +1,15 @@
+= link_to information_path(information) do
+  .card
+    -# - if information.eyecatch.attached? 
+    -#   .card_image
+    -#     = image_tag information.eyecatch
+    .card_content
+      .card_title
+        = information.title
+
+        .card_detail
+          = image_tag information.user.avatar_image
+          %div
+            %p= information.author_name
+            %p= information.display_created_at
+        

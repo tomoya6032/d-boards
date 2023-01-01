@@ -25,7 +25,7 @@ class InformationsController < ApplicationController
    def create
       @information = current_user.informations.build(information_params)
       if @information.save
-        redirect_to information_path(@information), notice: '保存ができたよ'
+        redirect_to informations_path(@information), notice: '保存ができたよ'
       else
         flash.now[:error] = '保存に失敗しました'
         render :new
@@ -59,10 +59,10 @@ class InformationsController < ApplicationController
   
    end
    
-   # private
-   # def information_params
-   #   params.require(:information).permit(:title, :content, :eyecatch)
-   # end
+   private
+   def information_params
+     params.require(:information).permit(:title, :content, :eyecatch)
+   end
 
    def set_information
      @information = Information.find(params[:id])
