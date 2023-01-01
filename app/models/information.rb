@@ -6,7 +6,7 @@ class Information < ApplicationRecord
     validates :title, format: { with: /\A(?!\@)/ }
 
     validates :content, presence: true
-    validates :content, length: { minimum: 10 }
+    validates :content, length: { minimum: 2 }
     validates :content, uniqueness: true
 
     validate :validate_title_and_content_length
@@ -41,6 +41,6 @@ class Information < ApplicationRecord
     private
     def validate_title_and_content_length
       char_count = self.title.length + self.content.length
-      errors.add(:content, '10文字以上必要です')unless char_count > 10
+      errors.add(:content, '2文字以上必要です')unless char_count > 2
     end
 end
