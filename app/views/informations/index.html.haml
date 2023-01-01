@@ -1,1 +1,11 @@
 %h1 informationだよ
+.informations 
+  .informations_container
+    %h2 記事一覧
+    -# - @informations.each do |information|
+    -#   = render 'commons/information', information: information 
+
+  .new_information_container
+    = link_to new_information_path do
+      .information_new
+        %p + 新しい記事を作成
