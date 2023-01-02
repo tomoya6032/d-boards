@@ -17,6 +17,10 @@ class User < ApplicationRecord
     articles.exists?(id: article.id)
   end
 
+  def has_written2?(information)
+    informations.exists?(id: information.id)
+  end
+
   def display_name
     profile&.nickname || self.email.split('@').first
   end

@@ -1,23 +1,24 @@
-%h1 show
+%h1 情報共有詳細ページ
 .information
-  -# - if @article.eyecatch.attached?
-    -# .article_image
-    -#   = image_tag @article.eyecatch
+  - if @information.eyecatch.attached?
+    .information_image
+      = image_tag @information.eyecatch
 
   .information_detail
     = image_tag @information.user.avatar_image
     %div
       %p= @information.author_name
       %p= @information.display_created_at
-    - if user_signed_in? && current_user.has_written?(@information)
+    - if user_signed_in? && current_user.has_written2?(@information)
       .information_detail_actions
         .dropdown
           = image_tag 'actions.svg', class: 'dropbtn'
           .dropdown-content.mini
             = link_to '編集する', edit_information_path(@information)
             = link_to '削除する', information_path(@information), data: { method: 'delete', confirm: '本当に削除してもよろしいですか？' }
-  %p ---- title ----
-  %h1.information_title= @information.title
+  .information_title
+    %p ---- title ----
+    %h2.information_title= @information.title
   .information_content
     %p ---- content ----
     %p= @information.content
