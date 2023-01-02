@@ -13,7 +13,7 @@ class Information < ApplicationRecord
     
     
     # has_many :comments, dependent: :destroy
-    has_many :likes, dependent: :destroy
+    # has_many :likes, dependent: :destroy
     belongs_to :user
 
 
@@ -25,9 +25,9 @@ class Information < ApplicationRecord
       user.display_name
     end
 
-    def like_count
-      likes.count
-    end
+    # def like_count
+    #   likes.count
+    # end
 
     def avatar_image
       if profile&.avatar&.attached?
