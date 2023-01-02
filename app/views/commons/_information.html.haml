@@ -1,8 +1,8 @@
 = link_to information_path(information) do
   .card
-    -# - if information.eyecatch.attached? 
-    -#   .card_image
-    -#     = image_tag information.eyecatch
+    - if information.eyecatch.attached? 
+      .card_image
+        = image_tag information.eyecatch
     .card_content
       .card_title
         = information.title

@@ -2,8 +2,8 @@
   %ul
     - @information.errors.full_messages.each do |message|
       %li= message
-  = form_with(model: information, url: { controller: "informations", action: "create" }, local: true) do |f|
-    -# = form_with(model: information, local: true) do |f|
+  = form_with(model: information, url: { controller: "informations", action: "update" }, local: true) do |f|
+    -#   = form_with(model: information, local: true) do |f|
     %div 
       = f.label :eyecatch, 'アイキャッチ'
     %div 
