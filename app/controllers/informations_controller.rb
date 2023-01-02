@@ -53,7 +53,7 @@ class InformationsController < ApplicationController
    
    
       def destroy
-        information = current_user.articles.find(params[:id])
+        information = current_user.informations.find(params[:id])
         information.destroy!
         redirect_to root_path, notice: '削除に成功しました'
    
