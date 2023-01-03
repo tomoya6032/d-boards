@@ -9,14 +9,18 @@ Rails.application.routes.draw do
 
   resources :articles do
     resources :comments, only: [:index, :new, :show, :edit, :create, :update, :destroy]
+    resource :like, only: [:create, :destroy]
   end
 
   resources :chats do
     resources :replys, only: [:index, :new, :show, :edit, :create, :update, :destroy]
+    resource :like, only: [:create, :destroy]
   end
   
-  resources :informations 
-
+  resources :informations do
+    resource :like, only: [:create, :destroy]
+  end
+  
   resources :lectures, only: [:index, :new, :show, :edit, :create, :update, :destroy]
   
   resources :favorites, only: [:index]
