@@ -6,9 +6,9 @@ class LikesController < ApplicationController
       article.likes.create!(user_id: current_user.id)
       redirect_to article_path(article)
 
-      chat = Article.find(params[:article_id])
-      article.likes.create!(user_id: current_user.id)
-      redirect_to article_path(article)
+      # @article_likes = Like.find_by(user_id: current_user.id, article_id: params[:article_id])
+      # @article_likes.destroy
+      # redirect_to article_path(params[:article_id])
     end
     
     def destroy

@@ -1,3 +1,7 @@
+// .chat_reply  {
+//   justify-content: space-between;
+// }
+
 .chat_reply_container {
   border-radius: 20px;
   border: solid;
@@ -5,4 +9,18 @@
   border-color: rgb(176, 194, 244);
   text-align: center;
   margin: 0 0 0 auto;
+  position: relative;
+  // justify-content: space-between;
+  
+}
+
+.chat_reply_heart {
+    position: absolute;
+    right: 16px;
+    bottom: 16px;
+    float: rigth;
+    img {
+      width: 20px;
+      height: 20px;
+    }
 }

@@ -14,14 +14,24 @@
             = link_to '編集する', edit_chat_path(@chat)
             = link_to '削除する', chat_path(@chat), data: { method: 'delete', confirm: '本当に削除してもよろしいですか？' }
 
-
   
   .chat_content_container
     %p= @chat.content
-    
-  .chat_reply_container 
-    = link_to new_chat_reply_path(@chat) do
-      返信する
+    -# .chat_reply  
+    .chat_reply_container 
+      = link_to new_chat_reply_path(@chat) do
+        返信する
+      .chat_reply_heart
+      - if user_signed_in?
+        - if current_user.has_liked?(@chat)
+          .chat_heart
+            = link_to chat_like_path(@chat), data: { method: 'delete' } do
+              = image_tag 'heart-active.svg'
+        - else
+          .chat_heart
+            = link_to chat_like_path(@chat), data: { method: 'post' } do
+              = image_tag 'heart.svg'
+
     
 .reply
   %h2 返信一覧
