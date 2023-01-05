@@ -14,7 +14,7 @@ Rails.application.routes.draw do
 
   resources :chats do
     resources :replys, only: [:index, :new, :show, :edit, :create, :update, :destroy]
-    resource :like, only: [:create, :destroy]
+    resource :favorites, only: [:create, :destroy]
   end
   
   resources :informations do

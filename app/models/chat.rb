@@ -1,7 +1,7 @@
 class Chat < ApplicationRecord
   has_many :replys
   belongs_to :user
-  has_many :likes, dependent: :destroy
+  has_many :favorites, dependent: :destroy
   validates :content, presence: true
   validates :content, uniqueness: true
   validates :content, length: { maximum: 140 }, presence: true

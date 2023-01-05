@@ -6,7 +6,7 @@ class User < ApplicationRecord
 
   has_many :articles, dependent: :destroy
   has_many :likes,dependent: :destroy
-  has_many :favorite_articles, through: :likes, source: :article
+  has_many :favorites, dependent: :destroy
   has_one :profile, dependent: :destroy
   has_many :comments, dependent: :destroy
   has_many :chats, dependent: :destroy
@@ -23,6 +23,10 @@ class User < ApplicationRecord
 
   def has_liked?(article)
     likes.exists?(article_id: article.id)
+  end
+
+  def has_favorited?(chat)
+    favorites.exists?(chat_id: chat.id)
   end
 
   def display_name
