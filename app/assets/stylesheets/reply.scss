@@ -16,9 +16,8 @@
 
 .chat_reply_heart {
     position: absolute;
-    // right: 16px;
     bottom: 16px;
-    float: right;
+    display: flex;
     img {
       width: 20px;
       height: 20px;

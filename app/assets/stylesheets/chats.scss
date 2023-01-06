@@ -309,14 +309,24 @@
       }
     }
   
-    // &_heart {
-    //   position: absolute;
-    //   right: 50px;
-    //   // bottom: 16px;
+    &_heart {
+      margin-left: 20px;
   
-    //   img {
-    //     width: 20px;
-    //     height: 20px;
-    //   }
-    // }
+      // img {
+      //   width: 20px;
+      //   height: 20px;
+      // }
+    }
+}
+
+.reactions {
+  display: flex;
+  // float: left;
+  padding: 10px 0px;
+}
+
+.heart_count {
+  margin-left: 10px;
+  text-align: center;
+  padding-top: 10px;
 }
