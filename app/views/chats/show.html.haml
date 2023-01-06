@@ -17,20 +17,22 @@
   
   .chat_content_container
     %p= @chat.content
-    -# .chat_reply  
-    .chat_reply_container 
-      = link_to new_chat_reply_path(@chat) do
-        返信する
-    .chat_reply_heart
-    - if user_signed_in?
-      - if current_user.has_favorited?(@chat)
-        .chat_heart
-          = link_to chat_favorites_path(@chat), data: { method: 'delete' } do
-            = image_tag 'heart-active.svg'
-      - else
-        .chat_heart
-          = link_to chat_favorites_path(@chat), data: { method: 'post' } do
-            = image_tag 'heart.svg'
+    .reactions
+      .chat_reply_container 
+        = link_to new_chat_reply_path(@chat) do
+          返信する
+      .chat_reply_heart
+      - if user_signed_in?
+        - if current_user.has_favorited?(@chat)
+          .chat_heart
+            = link_to chat_favorites_path(@chat), data: { method: 'delete' } do
+              = image_tag 'heart-active.svg'
+        - else
+          .chat_heart
+            = link_to chat_favorites_path(@chat), data: { method: 'post' } do
+              = image_tag 'heart.svg'
+        .heart_count 
+          = @chat.favorite_count
 
     
 .reply

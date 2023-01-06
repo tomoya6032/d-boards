@@ -14,9 +14,9 @@ class Chat < ApplicationRecord
     user.display_name
   end
 
-#   def like_count
-#     likes.count
-#   end
+  def favorite_count
+    favorites.count
+  end
 
   # def avatar_image
   #   if profile&.avatar&.attached?

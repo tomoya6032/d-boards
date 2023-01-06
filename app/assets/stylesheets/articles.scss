@@ -93,14 +93,31 @@
       position: absolute;
       right: 16px;
       bottom: 16px;
-  
-      img {
-        width: 20px;
-        height: 20px;
-      }
+      
+      // img {
+      //   width: 20px;
+      //   height: 20px;
+      // }
     }
   }
 
+  .article_reactions {
+    display: flex;
+
+    
+  }
+
+  .article_heart {
+    margin-right: 25px;
+    margin-bottom: 5px;
+  }
+
+  .article_heart_count {
+    margin-right: 0;
+    margin-left: auto;
+    padding-bottom: 0;
+    
+  }
 
   
   //ここからしたは意味のないCSS？
