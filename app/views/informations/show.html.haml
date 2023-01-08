@@ -1,8 +1,12 @@
-%h1 情報共有詳細ページ
+.index_container
+  %h2 災害関連研修等詳細ページ
 .information
   - if @information.eyecatch.attached?
     .information_image
       = image_tag @information.eyecatch
+  - else
+    .card_image
+      = image_tag 'default-eyecatch.jpg', size: '200*200'
 
   .information_detail
     = image_tag @information.user.avatar_image

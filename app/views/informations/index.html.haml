@@ -1,7 +1,8 @@
 
 .informations 
   .informations_container
-    %h1 情報共有一覧 
+    .index_container
+      %h2 災害関連研修など
     - @informations.each do |information|
       = render 'commons/information', information: information 
 

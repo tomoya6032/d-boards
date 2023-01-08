@@ -1,6 +1,7 @@
 .articles 
   .articles_container
-    %h2 記事一覧
+    .index_container
+      %h2 記事一覧
     - @articles.each do |article|
       = render 'commons/article', article: article 
 
