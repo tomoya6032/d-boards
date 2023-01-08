@@ -36,6 +36,14 @@ class Article < ApplicationRecord
       end
     end
 
+    # def eyecatch_image
+    #   if article&.eyecatch&.attached?
+    #     article.eyecatch
+    #   else
+    #     'default-eyecatch.svg'
+    #   end
+    # end
+
 
     private
     def validate_title_and_content_length

@@ -3,6 +3,9 @@
     - if information.eyecatch.attached? 
       .card_image
         = image_tag information.eyecatch
+    - else
+      .card_image
+        = image_tag 'default-eyecatch.jpg', size: '150*200'
     .card_content
       .card_title
         = information.title

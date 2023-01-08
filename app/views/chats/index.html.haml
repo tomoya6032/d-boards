@@ -1,6 +1,7 @@
 .chats
   .chats_container
-    %h2 chat一覧を表示しているぞ
+    .index_container
+      %h2 chat一覧を表示しているぞ
 
     - @chats.each do |chat|
       = render 'commons/chat', chat: chat 
