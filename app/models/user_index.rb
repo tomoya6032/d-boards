@@ -1,0 +1,2 @@
+class UserIndex < ApplicationRecord
+end
