@@ -83,3 +83,4 @@ production:
   database: d_boards_production
   username: d_boards
   password: <%= ENV['D_BOARDS_DATABASE_PASSWORD'] %>
+  host: <%= ENV['DATABASE_HOST'] %>
