@@ -1,0 +1,16 @@
+{
+    "name": "d-boards app",
+    "description": "This is d-boards",
+    "keywords": [],
+    "website": "",
+    "repository": "https://github.com/tomoya6032/d-boards.git",
+    "env": {},
+    "addons": [
+      "heroku-postgresql:hobby-dev"
+    ],
+    "buildpacks": [{
+      "url": "heroku/nodejs"
+    }, {
+      "url": "heroku/ruby"
+    }]
+  }
