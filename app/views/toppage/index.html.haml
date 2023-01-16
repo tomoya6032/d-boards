@@ -1,19 +1,6 @@
 .top_page 
   .top_container
-    %h2 TOPページ 
-    
-    -# - @articles.each do |board|
-    -#   = render 'commons/board', board: board 
-
-    -# - @chats.each do |board|
-    -#   = render 'commons/board', board: board
-
-    -# - @informations.each do |board|
-    -#   = render 'commons/board', board: board
-
-    -# - @lectures.each do |board|
-    -#   = render 'commons/board', board: board    
-    
+    %h2 TOPページ
 
   .section_container
     = link_to articles_path do
@@ -27,21 +14,13 @@
 
   .section_container
     = link_to informations_path do
-      %h3 情報共有
-      %p 研修講演などの情報共有事項<br>内容一覧へ
+      %h3 研修報告
+      %p 研修・講演などの情報共有事項<br>内容一覧へ
 
   .section_container
     = link_to lectures_path do
-      %h3 災害時、<br>私たちにできること
+      %h3 災害時、平時に<br>私たちにできること
       %p 災害発生に備えて取り組むこと<br>内容一覧へ
 
--# .div_contaner
 
-  
-
-
--#   .new_board_container
--#     = link_to new_board_path do
--#       .board_new
--#         %p + Add new board
 
