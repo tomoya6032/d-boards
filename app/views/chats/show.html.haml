@@ -4,7 +4,7 @@
   .chat_container
     .chat_detail
       = image_tag @chat.user.avatar_image
-    .div
+    %div
       %p= @chat.author_name
       %p= @chat.display_created_at
     - if user_signed_in? && current_user.has_written?(@chat)

@@ -34,7 +34,6 @@ $image_size: 56px;
   height: 300px;
 
   &_user {
-    // margin-bottom: 32px;
     display: flex;
     background-color: rgb(228, 246, 249);
     height: 300px;
@@ -43,7 +42,6 @@ $image_size: 56px;
     &_image {
       display: flex;
       flex-direction: column;
-      // justify-content: center;
       padding-top: 10px;
       padding-left: 10px;
 
@@ -92,12 +90,3 @@ $image_size: 56px;
     }
   }
 }
-
-
-
-
-// .profilePage_user_introduction {
-//   background-color: white;
-//   height: 200px;
-
-// }

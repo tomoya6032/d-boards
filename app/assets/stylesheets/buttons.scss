@@ -1,4 +1,4 @@
-// @import './variables';
+@import './variables';
 
 .btn-primary {
     background-color: #f4999d;
@@ -10,10 +10,7 @@
     padding: 16px 0;
     font-weight: bold;
     font-size: 25px;
-    // clear: both;
   }
-
-
 
 .btn-secondary {
     background-color: rgb(176, 194, 244);
@@ -24,7 +21,6 @@
     color: white;
     padding: 12px 0;
     font-weight: bold;
-    // clear: both;
 }
 
 

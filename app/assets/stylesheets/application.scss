@@ -16,7 +16,6 @@
 
 
 @import 'header';
-@import 'tabs';
 @import './variables';
 @import 'toppage';
 @import 'chats';
@@ -111,10 +110,7 @@ a {
   bottom: 0; /*下に固定*/
 }
 
-// .dropdown:hover .dropbtn {
-//   display: block;
-//   top: 0px; //ホバーでドロップダウンメニューが表示される位置を決めている
-// }
+
 
 .dropdown {
   position: relative;
@@ -157,7 +153,7 @@ a {
 
 .dropdown:hover .dropdown-content {
   display: block;
-  top: 60px; //ホバーでドロップダウンメニューが表示される位置を決めている
+  top: 40px; //ホバーでドロップダウンメニューが表示される位置を決めている
 }
 
 .footer {

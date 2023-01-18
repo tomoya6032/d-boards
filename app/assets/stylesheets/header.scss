@@ -12,11 +12,8 @@ $back-icon-size: 16px;
   background-color: #FFCC99;
   padding: $header-padding-y 8px;
   font-weight: bold;
-  
-
   a {
     color: black;
-
   }
 
   &_loginBtn {
@@ -41,7 +38,6 @@ $back-icon-size: 16px;
     align-items: flex-end;
     justify-content: space-between;
 
-
     img {
       cursor: pointer;
       width: $back-icon-size;
@@ -57,23 +53,20 @@ $back-icon-size: 16px;
       line-height: 20px;
       border-radius: 8px;
       background-color: white;
-      
-    
   }
-    &_pagetitle {
-      color: #FFCC99;
-      
-      font-size: 20px;
-      padding-left: 20px;
-      padding-right: 20px;
-    }
 
-    &_avatar {
-      width: 50px;
-      height: 50px;
-      border-radius: 100%;
-     
+  &_pagetitle {
+    color: #FFCC99;
+    
+    font-size: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
 
+  &_avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
   }
 }
 
@@ -90,7 +83,6 @@ $back-icon-size: 16px;
 }
 
 .dropdown img {
-  
   height: 60px;
   width: 60px;
 }
