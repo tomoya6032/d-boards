@@ -20,6 +20,10 @@ class User < ApplicationRecord
     def has_written2?(information)
       informations.exists?(id: information.id)
     end
+
+    def has_written3?(chat)
+      chats.exists?(id: chat.id)
+    end
   
     def has_liked?(article)
       likes.exists?(article_id: article.id)

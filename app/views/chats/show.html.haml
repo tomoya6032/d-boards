@@ -7,7 +7,7 @@
     %div
       %p= @chat.author_name
       %p= @chat.display_created_at
-    - if user_signed_in? && current_user.has_written?(@chat)
+    - if user_signed_in? && current_user.has_written3?(@chat)
       .chat_detail_actions
         .dropdown
           = image_tag 'actions.svg', class: 'dropbtn'

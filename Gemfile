@@ -22,7 +22,8 @@ gem 'jbuilder', '~> 2.7'
 # Use Active Model has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 gem 'psych', '~> 3.1'
-
+gem 'meta-tags'
+gem 'rubyzip', '2.3.0'
 gem 'hamlit'
 gem 'annotate'
 gem 'better_errors'
