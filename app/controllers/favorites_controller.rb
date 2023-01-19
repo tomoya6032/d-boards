@@ -5,10 +5,6 @@ class FavoritesController < ApplicationController
       chat = Chat.find(params[:chat_id])
       chat.favorites.create!(user_id: current_user.id)
       redirect_to chat_path(chat)
-
-      # @article_likes = Like.find_by(user_id: current_user.id, article_id: params[:article_id])
-      # @article_likes.destroy
-      # redirect_to article_path(params[:article_id])
     end
     
     def destroy

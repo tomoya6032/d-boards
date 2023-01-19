@@ -1,8 +1,7 @@
 class ReplysController < ApplicationController
     before_action :set_reply, only: [:show]
 
-    def index
-    #   @comments = Comment.all     
+    def index   
     
     end
     

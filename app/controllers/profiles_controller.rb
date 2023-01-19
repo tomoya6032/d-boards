@@ -10,7 +10,6 @@ class ProfilesController < ApplicationController
     
     def show
       @profile = current_user.profile
-      # @profiles = user.profile
 
     end
     
@@ -63,8 +62,5 @@ class ProfilesController < ApplicationController
       )
     end
 
-    # def set_profile
-    #   @profile = Profile.find(params[:id])
-    # end
-  
+    
 end

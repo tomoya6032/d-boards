@@ -16,7 +16,6 @@ class InformationsController < ApplicationController
    
    
       def new
-         # @information = Information.new
          @information = current_user.informations.build
    
       end

@@ -14,8 +14,6 @@ class ChatsController < ApplicationController
  
  
    def new
-      
-    #  @chat = Chat.new
      @chat = current_user.chats.build
  
    end
