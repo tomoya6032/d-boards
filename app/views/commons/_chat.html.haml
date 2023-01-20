@@ -1,6 +1,7 @@
-= link_to chat_path(chat) do
-  .chat_card
-    .card_detail
-      = image_tag chat.user.avatar_image 
-    .chat_card_content
-      = chat.content
+.item
+  = link_to chat_path(chat) do
+    .chat_card
+      .card_detail
+        = image_tag chat.user.avatar_image 
+      .chat_card_content
+        = chat.content
