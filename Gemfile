@@ -28,6 +28,7 @@ gem 'hamlit'
 gem 'annotate'
 gem 'better_errors'
 gem 'aws-sdk-s3', require: false
+gem  'google-analytics-rails'
 
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
