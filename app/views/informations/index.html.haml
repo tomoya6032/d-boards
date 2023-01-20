@@ -2,10 +2,16 @@
   .informations_container
     .index_container
       %h2 災害関連研修など
-    - @informations.each do |information|
-      = render 'commons/information', information: information 
+    .wrap
+      - @informations.each do |information|
+        = render 'commons/information', information: information 
 
   .new_information_container
     = link_to new_information_path do
       .information_new
         %p + 新しい記事を作成
+  
+.new_information
+  = link_to new_information_path do
+    .float_btn
+      %i.fa.fa-pencil
