@@ -3,5 +3,5 @@
     .chat_card
       .card_detail
         = image_tag chat.user.avatar_image 
-      .chat_card_content
-        = chat.content
+      = truncate(chat.content, length:25) 
+        

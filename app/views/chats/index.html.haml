@@ -5,6 +5,7 @@
     .wrap
       - @chats.each do |chat|
         = render 'commons/chat', chat: chat 
+        
 
   .new_chat_container
     = link_to new_chat_path do
