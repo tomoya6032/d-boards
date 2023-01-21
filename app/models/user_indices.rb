@@ -1,2 +1,0 @@
-class UserIndices < ApplicationRecord
-end
