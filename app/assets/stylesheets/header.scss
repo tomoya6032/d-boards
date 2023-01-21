@@ -56,11 +56,11 @@ $back-icon-size: 16px;
   }
 
   &_pagetitle {
-    color: #FFCC99;
+    // color: #FFCC99;
     
     font-size: 20px;
-    padding-left: 20px;
-    padding-right: 20px;
+    // padding-left: 20px;
+    // padding-right: 20px;
   }
 
   &_avatar {
@@ -70,12 +70,18 @@ $back-icon-size: 16px;
   }
 }
 
+.sitetitle {
+  width: 100%;
+  text-align:center;
+  
+}
+
 .dropdown a {
   color: black;
   text-align:center;
   background-color: $base-bg-color;
   border-radius: 8px;
-  font-size: 14px;
+  font-size: 20px;
   text-align:center;
   line-height:40px;
   padding: 10px 14px;

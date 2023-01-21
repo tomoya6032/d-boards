@@ -14,12 +14,10 @@
   %body
     %header.header
       .header_logos
-        -# - if !current_page?(root_path)
-          -#   = link_to :back do
-          -#     = image_tag 'back.svg', class: 'header_back'
         .header_pagetitle
           .pagetitle
-            = link_to 'Boards', root_path
+            = link_to '災害支援ボードtop', root_path
+       
         - if user_signed_in?
           .dropdown
             = image_tag current_user.avatar_image, class: 'header_avatar dropbtn'
@@ -29,14 +27,16 @@
               = link_to 'ログアウト', destroy_user_session_path, data: { method: 'delete' }
         - else
           = link_to 'ログイン', new_user_session_path, class: 'header_loginBtn'
-      
+    
+    .sitetitle 
+      %h1 災害支援情報共有ボード
+
     - if flash.present?
       .flash
         - flash.each do |key, value|
           %div{:class => key}= value
-
     = yield
   
-    -# .footerWrap
-    -#   .footer 
-    -#     %P コピーライト2022
+    .footerWrap
+      .footer 
+        %P コピーライト2022
