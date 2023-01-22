@@ -1,0 +1,9 @@
+.top_page 
+  .top_container
+    %h2 TOPページ
+
+.wrap
+  - @userindices.each do |userindex|
+    = link_to userindex_path(userindex) do
+
+    
