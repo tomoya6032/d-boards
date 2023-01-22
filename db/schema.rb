@@ -125,11 +125,6 @@ ActiveRecord::Schema.define(version: 2023_01_22_014343) do
     t.index ["user_id"], name: "index_replies_on_user_id"
   end
 
-  create_table "user_indices", force: :cascade do |t|
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-  end
-
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
