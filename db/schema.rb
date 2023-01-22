@@ -10,7 +10,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+<<<<<<< HEAD
 ActiveRecord::Schema.define(version: 2023_01_22_014343) do
+=======
+ActiveRecord::Schema.define(version: 2023_01_10_200831) do
+>>>>>>> parent of ef3b4ef (oooo)
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
