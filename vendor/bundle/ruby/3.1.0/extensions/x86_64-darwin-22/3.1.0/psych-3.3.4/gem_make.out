@@ -1,5 +1,5 @@
 current directory: /Users/mac-user/d-boards/vendor/bundle/ruby/3.1.0/gems/psych-3.3.4/ext/psych
-/Users/mac-user/.rbenv/versions/3.1.2/bin/ruby -I /Users/mac-user/.rbenv/versions/3.1.2/lib/ruby/3.1.0 -r ./siteconf20230120-82341-lqtvhy.rb extconf.rb
+/Users/mac-user/.rbenv/versions/3.1.2/bin/ruby -I /Users/mac-user/.rbenv/versions/3.1.2/lib/ruby/3.1.0 -r ./siteconf20230209-6009-2j8crp.rb extconf.rb
 checking for yaml.h... no
 checking for _WIN32... no
 checking for dlfcn.h... yes
@@ -38,4 +38,4 @@ linking shared-object psych.bundle
 
 current directory: /Users/mac-user/d-boards/vendor/bundle/ruby/3.1.0/gems/psych-3.3.4/ext/psych
 make DESTDIR\= install
-/usr/bin/install -c -m 0755 psych.bundle ./.gem.20230120-82341-jshq5
+/usr/bin/install -c -m 0755 psych.bundle ./.gem.20230209-6009-beskln

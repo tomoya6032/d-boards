@@ -1,5 +1,5 @@
 current directory: /Users/mac-user/d-boards/vendor/bundle/ruby/3.1.0/gems/haml-6.0.12/ext/haml
-/Users/mac-user/.rbenv/versions/3.1.2/bin/ruby -I /Users/mac-user/.rbenv/versions/3.1.2/lib/ruby/3.1.0 -r ./siteconf20230120-82341-bypa6o.rb extconf.rb
+/Users/mac-user/.rbenv/versions/3.1.2/bin/ruby -I /Users/mac-user/.rbenv/versions/3.1.2/lib/ruby/3.1.0 -r ./siteconf20230209-6009-7jyk25.rb extconf.rb
 creating Makefile
 
 current directory: /Users/mac-user/d-boards/vendor/bundle/ruby/3.1.0/gems/haml-6.0.12/ext/haml
@@ -70,4 +70,4 @@ linking shared-object haml/haml.bundle
 
 current directory: /Users/mac-user/d-boards/vendor/bundle/ruby/3.1.0/gems/haml-6.0.12/ext/haml
 make DESTDIR\= install
-/usr/bin/install -c -m 0755 haml.bundle ./.gem.20230120-82341-du3euu/haml
+/usr/bin/install -c -m 0755 haml.bundle ./.gem.20230209-6009-7d78b7/haml

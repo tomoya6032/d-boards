@@ -1,5 +1,5 @@
 current directory: /Users/mac-user/d-boards/vendor/bundle/ruby/3.1.0/gems/hamlit-3.0.3/ext/hamlit
-/Users/mac-user/.rbenv/versions/3.1.2/bin/ruby -I /Users/mac-user/.rbenv/versions/3.1.2/lib/ruby/3.1.0 -r ./siteconf20230120-82341-v2m0w4.rb extconf.rb
+/Users/mac-user/.rbenv/versions/3.1.2/bin/ruby -I /Users/mac-user/.rbenv/versions/3.1.2/lib/ruby/3.1.0 -r ./siteconf20230209-6009-ozhaza.rb extconf.rb
 creating Makefile
 
 current directory: /Users/mac-user/d-boards/vendor/bundle/ruby/3.1.0/gems/hamlit-3.0.3/ext/hamlit
@@ -70,4 +70,4 @@ linking shared-object hamlit/hamlit.bundle
 
 current directory: /Users/mac-user/d-boards/vendor/bundle/ruby/3.1.0/gems/hamlit-3.0.3/ext/hamlit
 make DESTDIR\= install
-/usr/bin/install -c -m 0755 hamlit.bundle ./.gem.20230120-82341-oxuw75/hamlit
+/usr/bin/install -c -m 0755 hamlit.bundle ./.gem.20230209-6009-vgzimm/hamlit

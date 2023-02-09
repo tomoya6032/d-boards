@@ -1,10 +1,10 @@
 current directory: /Users/mac-user/d-boards/vendor/bundle/ruby/3.1.0/gems/pg-1.4.5/ext
-/Users/mac-user/.rbenv/versions/3.1.2/bin/ruby -I /Users/mac-user/.rbenv/versions/3.1.2/lib/ruby/3.1.0 -r ./siteconf20230120-82341-1csm7q.rb extconf.rb
+/Users/mac-user/.rbenv/versions/3.1.2/bin/ruby -I /Users/mac-user/.rbenv/versions/3.1.2/lib/ruby/3.1.0 -r ./siteconf20230209-6009-7v9v2m.rb extconf.rb
 Calling libpq with GVL unlocked
 checking for pg_config... yes
 Using config values from /usr/local/bin/pg_config
-checking for whether -Wl,-rpath,/usr/local/lib is accepted as LDFLAGS... yes
-Using libpq from /usr/local/lib
+checking for whether -Wl,-rpath,/usr/local/lib/postgresql@14 is accepted as LDFLAGS... yes
+Using libpq from /usr/local/lib/postgresql@14
 checking for libpq-fe.h... yes
 checking for libpq/libpq-fs.h... yes
 checking for pg_config_manual.h... yes
@@ -59,5 +59,5 @@ linking shared-object pg_ext.bundle
 
 current directory: /Users/mac-user/d-boards/vendor/bundle/ruby/3.1.0/gems/pg-1.4.5/ext
 make DESTDIR\= install
-/usr/bin/install -c -m 0755 pg_ext.bundle ./.gem.20230120-82341-pn369s
+/usr/bin/install -c -m 0755 pg_ext.bundle ./.gem.20230209-6009-tmpajv
 installing pg_ext libraries

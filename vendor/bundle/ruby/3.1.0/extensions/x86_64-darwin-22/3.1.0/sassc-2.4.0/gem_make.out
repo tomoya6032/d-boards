@@ -1,5 +1,5 @@
 current directory: /Users/mac-user/d-boards/vendor/bundle/ruby/3.1.0/gems/sassc-2.4.0/ext
-/Users/mac-user/.rbenv/versions/3.1.2/bin/ruby -I /Users/mac-user/.rbenv/versions/3.1.2/lib/ruby/3.1.0 -r ./siteconf20230120-82341-dypjge.rb extconf.rb
+/Users/mac-user/.rbenv/versions/3.1.2/bin/ruby -I /Users/mac-user/.rbenv/versions/3.1.2/lib/ruby/3.1.0 -r ./siteconf20230209-6009-wjvx9f.rb extconf.rb
 creating Makefile
 
 current directory: /Users/mac-user/d-boards/vendor/bundle/ruby/3.1.0/gems/sassc-2.4.0/ext
@@ -87,4 +87,4 @@ linking shared-object sassc/libsass.bundle
 
 current directory: /Users/mac-user/d-boards/vendor/bundle/ruby/3.1.0/gems/sassc-2.4.0/ext
 make DESTDIR\= install
-/usr/bin/install -c -m 0755 libsass.bundle ./.gem.20230120-82341-p3smjj/sassc
+/usr/bin/install -c -m 0755 libsass.bundle ./.gem.20230209-6009-jzdare/sassc
