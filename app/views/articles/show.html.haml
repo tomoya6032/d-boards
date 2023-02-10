@@ -24,7 +24,7 @@
   %h1.article_title= @article.title
   .article_content
     %p ---- content ----
-    %p= @article.content
+    %p=h @article.content.body
   .article_reactions
     - if user_signed_in?
       - if current_user.has_liked?(@article)
