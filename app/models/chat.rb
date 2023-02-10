@@ -2,9 +2,11 @@ class Chat < ApplicationRecord
   has_many :replys
   belongs_to :user
   has_many :favorites, dependent: :destroy
-  validates :content, presence: true
-  validates :content, uniqueness: true
-  validates :content, length: { maximum: 140 }, presence: true
+  has_rich_text :content
+
+  # validates :content, presence: true
+  # validates :content, uniqueness: true
+  # validates :content, length: { maximum: 140 }, presence: true
 
   def display_created_at
     I18n.l(self.created_at, format: :default)
@@ -17,6 +19,12 @@ class Chat < ApplicationRecord
   def favorite_count
     favorites.count
   end
+
+  # def truncated_content(rich_text)
+  #   truncate(rich_text.to_plain_text, length: 10, separator: "...")
+  # end
+
+
 
 
 end

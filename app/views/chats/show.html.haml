@@ -17,7 +17,7 @@
 
   
   .chat_content_container
-    %p= @chat.content
+    %p=h @chat.content
     .reactions
       .chat_reply_container 
         = link_to new_chat_reply_path(@chat) do

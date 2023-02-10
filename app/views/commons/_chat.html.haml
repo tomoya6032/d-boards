@@ -3,5 +3,8 @@
     .chat_card
       .card_detail
         = image_tag chat.user.avatar_image 
-      = truncate(chat.content, length:25) 
+        -# = truncate(chat.content, length:25) 
+        -# =h chat.content
+        = truncate(chat.content.to_plain_text, length: 30)
+        
         
