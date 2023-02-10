@@ -1,4 +1,5 @@
 class ArticlesController < ApplicationController
+  
 
   before_action :set_article, only: [:show]
   before_action :authenticate_user!, only: [:new, :create, :edit, :update, :destroy]
@@ -23,6 +24,7 @@ class ArticlesController < ApplicationController
 
     def create
       @article = current_user.articles.build(article_params)
+      
       if @article.save
         redirect_to article_path(@article), notice: '保存ができたよ'
       else
@@ -40,6 +42,7 @@ class ArticlesController < ApplicationController
 
     def update
       @article = current_user.articles.find(params[:id])
+      
       if @article.update(article_params)
         redirect_to article_path(@article),notice: '更新できました'
       else
