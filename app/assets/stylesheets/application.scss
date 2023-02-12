@@ -206,27 +206,22 @@ a {
 
 @media screen and (min-width: 600px) {
   .wrap {
-    display: inline-flex;
+    display: flex;
     flex-wrap: wrap;  
   }
   .item {
     padding: 8px;
     width: 45%;
   }
-
-  
 }
 
 @media screen and (min-width: 960px) {
   .wrap {
-    display: inline-flex;
+    display: flex;
     flex-wrap: wrap;
   }
   .item {
     padding: 8px;
     width: 31%;
   }
-
-
-  
 }
