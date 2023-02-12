@@ -1,5 +1,6 @@
 class ReplysController < ApplicationController
     before_action :set_reply, only: [:show]
+    before_action :authenticate_user!, only: [:new, :create, :edit, :update, :destroy]
 
     def index   
     
@@ -56,7 +57,7 @@ class ReplysController < ApplicationController
       params.require(:reply).permit(:content, :chat_id, :user_id)
     end
 
-    def set_chat
+    def set_reply
       @reply = Reply.find(params[:id])
     end
 end
