@@ -21,6 +21,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: #f4999d;
+    border-radius: 20px;
 }
 
 
@@ -41,7 +43,7 @@
   &_detail {
     display: flex;
     align-items: center;
-    font-size: 12px;
+    font-size: 20px;
     margin-left: 0;
     width: 50px;
     img {
@@ -65,12 +67,14 @@
 .chats {
   &_card_detail {
     margin-left: 0;
+    
     img {
       width: 40px;
       height: 40px;
     }
   } 
 }
+
 
 
 .chat_container {
@@ -97,6 +101,10 @@
   padding-bottom: 20px;
 }
 
+
+.chat_card{
+    font-size: 30px;
+}
 
 
 .reply {

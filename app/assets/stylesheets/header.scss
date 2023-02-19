@@ -9,7 +9,7 @@ $back-icon-size: 16px;
 .header {
   display: flex;
   justify-content: space-between;
-  background-color: #FFCC99;
+  background-color: rgb(35, 88, 248);
   padding: $header-padding-y 8px;
   font-weight: bold;
   a {
@@ -56,11 +56,9 @@ $back-icon-size: 16px;
   }
 
   &_pagetitle {
-    // color: #FFCC99;
     
     font-size: 20px;
-    // padding-left: 20px;
-    // padding-right: 20px;
+   
   }
 
   &_avatar {
@@ -73,7 +71,7 @@ $back-icon-size: 16px;
 .sitetitle {
   width: 100%;
   text-align:center;
-  
+  color: white;
 }
 
 .dropdown a {
@@ -81,7 +79,7 @@ $back-icon-size: 16px;
   text-align:center;
   background-color: $base-bg-color;
   border-radius: 8px;
-  font-size: 20px;
+  font-size: 16px;
   text-align:center;
   line-height:40px;
   padding: 10px 14px;
