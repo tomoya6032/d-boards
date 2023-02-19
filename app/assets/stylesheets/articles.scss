@@ -194,7 +194,7 @@
 }
 
 .article_new {
-    color: #FFFFFF;
+    // color: #ffffff;
     font-size: 24px;
     font-weight: bold;
     color: #000;
@@ -206,4 +206,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    border-radius: 20px;
+    background-color: #f4999d;
 }
