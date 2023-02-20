@@ -5,6 +5,6 @@
         = image_tag chat.user.avatar_image 
         -# = truncate(chat.content, length:25) 
         -# =h chat.content
-        = truncate(chat.content.to_plain_text, length: 30, class: "truncate")
+        = truncate(chat.content.to_plain_text, length: 15, class: "truncate")
         
         

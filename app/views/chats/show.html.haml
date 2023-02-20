@@ -21,7 +21,7 @@
     .reactions
       .chat_reply_container 
         = link_to new_chat_reply_path(@chat) do
-          返信する
+          このチャットへ返信する
       .chat_reply_heart
       - if user_signed_in?
         - if current_user.has_favorited?(@chat)
