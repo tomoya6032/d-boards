@@ -11,7 +11,7 @@
         .card_title
           
           = truncate(article.title, length:10) 
-          .card_detail
+          .card_articl_detail
             = image_tag article.user.avatar_image
             %div
               %p= article.author_name

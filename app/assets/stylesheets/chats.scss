@@ -45,34 +45,27 @@
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
   border-radius: 30px;
   height: 60px;
-  font-size: 50px;
+  // font-size: 20px;
   text-overflow: ellipsis;
   overflow: hidden;
+  position: relative;
 
-  &_detail {
-    display: flex;
-    align-items: center;
-    font-size: 20px;
-    margin-left: 0;
-    width: 50px;
-    img {
-     width: 40px;
-     height: 40px;
-     border-radius: 100%;
-     margin-left: 0px;
-     position: absolute;
-    }
-    &_actions {
-      right: 0px;
-      width: 40px;
-      margin: 0 0 0 auto;
-    }
-    &_img {
-      size: 50%;
-    }
+  img {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    margin-left: 0px;
     
-  } 
+   }
+  }
+
+.chat_item {
+  display: flex;
+  justify-content: flex-start;
 }
+
+
 
 .chats {
   &_card_detail {
@@ -85,6 +78,29 @@
     }
   } 
 }
+
+.card_detail {
+  display: flex;
+}
+
+.card_detail {
+  display: flex;
+  // align-items: center; /* 縦方向の中央揃え */
+}
+
+.card_detail > div:first-child {
+  width: 45px; /* 片方のdivの幅 */
+}
+
+.card_detail > div:last-child {
+  flex: 1; /* 残りの幅を自動で割り当てる */
+}
+
+// .card_detail .truncate {
+//   overflow: hidden; /* 文字列のオーバーフローを隠す */
+//   white-space: nowrap; /* 文字列の改行を禁止する */
+//   text-overflow: ellipsis; /* 文字列を省略する */
+// }
 
 
 
@@ -115,7 +131,7 @@
 
 
 .chat_card{
-    font-size: 30px;
+    font-size: 20px;
 }
 
 
@@ -229,14 +245,17 @@
   p {
    font-size: 16px;
   }
+
   &_detail {
     padding: 5px;
     display: flex;
     justify-content: flex-start;
+    align-items: center; 
     font-size: 12px;
     position: relative;
     margin-left: 0;
-    width: 50px;
+    // padding-right: 20px;
+    width: 70px;
   
     img {
       cursor: pointer;
@@ -273,3 +292,4 @@
   text-align: center;
   padding-top: 10px;
 }
+
