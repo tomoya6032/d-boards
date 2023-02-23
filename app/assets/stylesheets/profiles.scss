@@ -6,6 +6,7 @@
 
 $image_size: 56px;
 
+
 .container.profilePage {
     height: 350px;
     margin-top: 0;
@@ -27,6 +28,32 @@ $image_size: 56px;
   padding-top: 15px;
   padding-right: 10px;
   
+}
+
+.profile_card_detail {
+  padding-top: 12px;
+  cursor: pointer;
+  display: flex;
+  font-size: 10px;
+  align-items: center; 
+
+  img {
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    margin-right: 8px;
+  }
+}
+
+// .information_item {
+//   display: inline-block; 
+//   display: flex;
+//   justify-content: flex-start;
+// }
+
+.profile_card_detail > div:first-child {
+  width: 45px; /* 片方のdivの幅 */
+  flex: 1; /* 残りの幅を自動で割り当てる */ 
 }
 
 .profilePage {
@@ -90,3 +117,27 @@ $image_size: 56px;
     }
   }
 }
+
+// @media screen and (min-width: 600px) {
+//   .wrap {
+//     display: flex;
+//     flex-wrap: wrap;  
+//     .profile_item {
+//       padding: 8px;
+//       width: 45%;
+//     }
+//   }
+  
+// }
+
+// @media screen and (min-width: 960px) {
+//   .wrap {
+//     display: flex;
+//     flex-wrap: wrap;
+//     .profile_item {
+//       padding: 8px;
+//       width: 31%;
+//     }
+//   }
+  
+// }

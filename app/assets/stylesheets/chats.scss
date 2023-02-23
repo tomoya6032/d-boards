@@ -31,7 +31,7 @@
 //   font-size: 50px;
 // }
 .trix-content {
-  font-size: 20px;
+  font-size: 18px;
 }
 
 
@@ -79,9 +79,9 @@
   } 
 }
 
-.card_detail {
-  display: flex;
-}
+// .card_detail {
+//   display: flex;
+// }
 
 .card_detail {
   display: flex;
@@ -90,11 +90,12 @@
 
 .card_detail > div:first-child {
   width: 45px; /* 片方のdivの幅 */
-}
-
-.card_detail > div:last-child {
   flex: 1; /* 残りの幅を自動で割り当てる */
 }
+
+// .card_detail > div:last-child {
+  // flex: 1; /* 残りの幅を自動で割り当てる */
+// }
 
 // .card_detail .truncate {
 //   overflow: hidden; /* 文字列のオーバーフローを隠す */

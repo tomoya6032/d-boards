@@ -13,54 +13,59 @@
         = current_user.profile&.introduction
 .index_container
   %h2 記事一覧
-.main  
-  - current_user.articles.each do |article| 
-    = link_to article_path(article) do
-      .card
-        - if article.eyecatch.attached? 
-          .card_image
-            = image_tag article.eyecatch
-        - else
-          .card_image
-            = image_tag 'default-eyecatch.jpg', size: '150*200'
-        .card_content
-          .card_title
-            = article.title
-            .card_detail
-              = image_tag article.user.avatar_image
-              %div
-                %p= article.author_name
-                %p= article.display_created_at
+.wrap  
+  .profile_item
+    - current_user.articles.each do |article| 
+      = link_to article_path(article) do
+        .card
+          - if article.eyecatch.attached? 
+            .card_image
+              = image_tag article.eyecatch
+          - else
+            .card_image
+              = image_tag 'default-eyecatch.jpg', size: '150*200'
+          .card_content
+            .card_title
+              = article.title
+              .profile_card_detail
+                = image_tag article.user.avatar_image
+                %div
+                  %p= article.author_name
+                  %p= article.display_created_at
 
 .index_container
   %h2 チャット一覧
-.main
+.wrap
   - current_user.chats.each do |chat| 
     = link_to chat_path(chat) do
       .chat_card
         .card_detail
-          = image_tag chat.user.avatar_image 
-        .chat_card_content
-          = chat.content
+          %div
+            .profile_card_detail
+              = image_tag chat.user.avatar_image 
+          %div
+            .chat_card_content
+              = chat.content
 
 .index_container
   %h2 インフォメーション
-.main
-  - current_user.informations.each do |information| 
-    = link_to information_path(information) do
-      .card
-        - if information.eyecatch.attached? 
-          .card_image
-            = image_tag information.eyecatch
-        - else
-          .card_image
-            = image_tag 'default-eyecatch.jpg', size: '150*200'
-        .card_content
-          .card_title
-            = information.title
+.wrap
+  .information_item
+    - current_user.informations.each do |information| 
+      = link_to information_path(information) do
+        .card
+          - if information.eyecatch.attached? 
+            .card_image
+              = image_tag information.eyecatch
+          - else
+            .card_image
+              = image_tag 'default-eyecatch.jpg', size: '150*200'
+          .card_content
+            .card_title
+              = information.title
 
-            .card_detail
-              = image_tag information.user.avatar_image
-              %div
-                %p= information.author_name
-                %p= information.display_created_at
+              .profile_card_detail
+                = image_tag information.user.avatar_image
+                %div
+                  %p= information.author_name
+                  %p= information.display_created_at
