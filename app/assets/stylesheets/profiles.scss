@@ -4,7 +4,7 @@
 
 @import './variables';
 
-$image_size: 56px;
+// $image_size: 56px;
 
 
 .container.profilePage {
@@ -45,10 +45,8 @@ $image_size: 56px;
   }
 }
 
-// .information_item {
-//   display: inline-block; 
-//   display: flex;
-//   justify-content: flex-start;
+// .profile_item {
+//  max-width: 900px;
 // }
 
 .profile_card_detail > div:first-child {
@@ -118,6 +116,11 @@ $image_size: 56px;
   }
 }
 
+// .profile_item {
+//   height: 300px;
+
+// }
+
 // @media screen and (min-width: 600px) {
 //   .wrap {
 //     display: flex;
@@ -133,7 +136,7 @@ $image_size: 56px;
 // @media screen and (min-width: 960px) {
 //   .wrap {
 //     display: flex;
-//     flex-wrap: wrap;
+//     flex-wrap: wrap;  
 //     .profile_item {
 //       padding: 8px;
 //       width: 31%;
