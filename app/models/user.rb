@@ -12,6 +12,14 @@ class User < ApplicationRecord
     has_many :chats, dependent: :destroy
     has_many :informations, dependent: :destroy
     has_one_attached :avatar, dependent: :destroy
+
+    has_many :following_relationships, foreign_key: 'follower_id', class_name: 'Relationship', dependent: :destroy
+    has_many :followings, through: :following_relationships, source: :following
+
+    has_many :follower_relationships, foreign_key: 'following_id', class_name: 'Relationship', dependent: :destroy
+    has_many :followers, through: :follower_relationships, source: :follower
+
+
   
     def has_written?(article)
       articles.exists?(id: article.id)
@@ -36,6 +44,33 @@ class User < ApplicationRecord
     def display_name
       profile&.nickname || self.email.split('@').first
     end
+
+    def follow!(user)
+      # if user.is_a?(User)
+      #   user_id = user.id
+      # else
+      #   user_id = user
+      # end  
+      # user_id = get_user_id(user)
+      following_relationships.create!(following_id: user.id)
+    end
+
+    def unfollow!(user)
+      # if user.is_a?(User)
+      #   user_id = user.id
+      # else
+      #   user_id = user
+      # end  
+      # user_id = get_user_id(user)
+      relation = following_relationships.find_by!(following_id: user.id)
+      relation.destroy!
+    end
+  
+    def has_followed?(user)
+      following_relationships.exists?(following_id: user.id)
+    end
+
+
   
     def prepare_profile
       profile || build_profile
