@@ -51,8 +51,8 @@ class User < ApplicationRecord
       # else
       #   user_id = user
       # end  
-      # user_id = get_user_id(user)
-      following_relationships.create!(following_id: user.id)
+      user_id = get_user_id(user)
+      following_relationships.create!(following_id: user_id)
     end
 
     def unfollow!(user)
@@ -61,8 +61,8 @@ class User < ApplicationRecord
       # else
       #   user_id = user
       # end  
-      # user_id = get_user_id(user)
-      relation = following_relationships.find_by!(following_id: user.id)
+      user_id = get_user_id(user)
+      relation = following_relationships.find_by!(following_id: user_id)
       relation.destroy!
     end
   
@@ -84,6 +84,16 @@ class User < ApplicationRecord
       end
     end
     
+  private
+    def get_user_id(user)
+      if user.is_a?(User)
+        # user_id = user.id
+        user.id
+      else
+        # user_id = user
+        user
+      end  
+    end  
   
   end
   
