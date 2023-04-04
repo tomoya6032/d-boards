@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   
   
    root to: 'toppage#index'
-  
+   resource :timeline, only: [:show]
 
 
   resources :articles do
