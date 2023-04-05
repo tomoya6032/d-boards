@@ -26,6 +26,7 @@ gem 'meta-tags'
 gem 'rubyzip', '2.3.0'
 gem 'hamlit'
 gem 'annotate'
+gem 'active_model_serializers'
 gem 'better_errors'
 gem 'aws-sdk-s3', require: false
 gem  'google-analytics-rails'
