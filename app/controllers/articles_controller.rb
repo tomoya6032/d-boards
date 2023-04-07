@@ -15,7 +15,7 @@ class ArticlesController < ApplicationController
       
     end
 
-
+    
     def new
       @article = current_user.articles.build
 

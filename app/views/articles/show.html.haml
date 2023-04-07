@@ -42,6 +42,15 @@
       -#       = image_tag 'heart.svg'
       .article_heart_count 
         = @article.like_count
+
+
+:javascript
+  $(function() {
+    var articleId = #{@article.id};
+    $.getJSON('/articles/' + articleId, function(data) {
+      $('.article_heart_count').text(data.like_count);
+    });
+  });
   
 .article 
   %h2 コメント一覧
@@ -60,3 +69,11 @@
       コメントを追加
 
 = javascript_pack_tag 'article' 
+:javascript
+  $(function() {
+    var articleId = #{@article.id};
+    $.getJSON('/articles/' + articleId, function(data) {
+      $('.article_heart_count').text(data.like_count);
+    });
+  });
+  

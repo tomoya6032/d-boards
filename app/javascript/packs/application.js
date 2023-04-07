@@ -23,3 +23,5 @@ require("@rails/actiontext")
 //     window.alert('DOM LOADED')
 // })
 
+//= require jquery
+//= require like_count

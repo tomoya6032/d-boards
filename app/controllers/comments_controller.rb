@@ -3,9 +3,12 @@ class CommentsController < ApplicationController
    before_action :authenticate_user!, only: [:new, :create, :edit, :update, :destroy]
 
    def index    
+      # article = Article.find(params[:article_id])
+      # comments = article.comments
+      # render json: comments
       article = Article.find(params[:article_id])
-      comments = article.comments
-      render json: comments
+      comments = article.comments.includes(:user)
+      render json: comments.to_json(include: :user)
    end
   
   
@@ -27,9 +30,10 @@ class CommentsController < ApplicationController
    def create
       article = Article.find(params[:article_id])
       @comment = article.comments.build(comment_params)
+      @comment.user = current_user
       @comment.save!
      
-     render json: @comment
+      render json: @comment
   
    end
   
@@ -53,11 +57,14 @@ class CommentsController < ApplicationController
   
    private
    def comment_params
-     params.require(:comment).permit(:content)
+      params.require(:comment).permit(:content)
+   #   params.require(:comment).permit(:content, :chat_id, :user_id)
+
    end
 
    def set_article
      @comment = Comment.find(params[:id])
+     
    end
 
 end
