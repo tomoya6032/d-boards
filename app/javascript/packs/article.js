@@ -45,6 +45,7 @@ const appendNewComment = (comment) => {
   )
 }
 
+
 document.addEventListener('DOMContentLoaded', () => {
     const dataset = document.getElementById('article-show').dataset;
     const articleId = dataset.articleId
@@ -53,8 +54,9 @@ document.addEventListener('DOMContentLoaded', () => {
       .then((response) => {
         const comments = response.data
         comments.forEach((comment) => {
-          appendNewComment(comment)
-        })
+            appendNewComment(comment)
+            $('#comment_content').val('')
+        });
       })
     handleCommentForm()
    
@@ -67,11 +69,11 @@ document.addEventListener('DOMContentLoaded', () => {
         axios.post(`/articles/${articleId}/comments`, {
           comment: {content: content}
         })
-           .then((res) => {
-             const comment = res.data
-             appendNewComment(comment)
-            $('#comment_content').val('')
-           })
+        .then((res) => {
+            const comment = res.data
+            appendNewComment(comment)
+        $('#comment_content').val('')
+        })
       }
     })
 
@@ -84,6 +86,7 @@ document.addEventListener('DOMContentLoaded', () => {
     listenInactiveHeratEvent(articleId)
     listenActiveHeratEvent(articleId)
 
-   
- })
+
+  
+})
 

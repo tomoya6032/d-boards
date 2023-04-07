@@ -28,7 +28,8 @@ textarea, trix-editor {
   margin: 20px 8px;
   // margin-top: 50px;
   padding: 8px 8px;
-  min-height: 440px;
+ 
+  min-height: 200px;
   background-color: white;
   border-radius: 20px;
   resize: vertical;
@@ -41,4 +42,23 @@ textarea, trix-editor {
 
 .rich {
    margin-top: 30px;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+/* コメント入力エリアのスタイル */
+.comment-text-area {
+  width: 90%;
+  /* ここにテキストエリアのスタイルを追加することができます */
+}
+
+/* コメント追加ボタンのスタイル */
+.btn-secondary.add-comment-button {
+  width: 50%;
+  /* ここにボタンのスタイルを追加することができます */
 }
