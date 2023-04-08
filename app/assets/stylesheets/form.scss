@@ -4,6 +4,7 @@
 input, select {
   margin: 10px 2px;
   padding: 10px 2px;
+  
   &.text {
     height: 100%;
     width: 90%;
@@ -23,13 +24,16 @@ label {
 }
 
 
-textarea, trix-editor {
+textarea, trix-editor, #comment_content.sm {
   width: 90%;
   margin: 20px 8px;
   // margin-top: 50px;
+  font-size: 16px; 
   padding: 8px 8px;
- 
-  min-height: 200px;
+  min-width: 800px;
+  min-height: 300px;
+  // margin: 0 auto;
+  // text-align: center;
   background-color: white;
   border-radius: 20px;
   resize: vertical;
@@ -44,11 +48,30 @@ textarea, trix-editor {
    margin-top: 30px;
 }
 
-.container {
+
+
+.form_container {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  min-width: 600px;
+  width: 90%;
+}
+
+.profile_edit_container {  
+  label {
+    margin-left: 60px;
+  }
+  textarea, input {
+    min-width: 600px;
+    width: 80%;
+    margin: 20px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
 }
 
 /* コメント入力エリアのスタイル */
@@ -62,3 +85,69 @@ textarea, trix-editor {
   width: 50%;
   /* ここにボタンのスタイルを追加することができます */
 }
+
+// .reply_edit_container {
+//   width: 90%;
+//   margin: 20px 8px;
+//   // margin-top: 50px;
+//   padding: 8px 8px;
+//   width: 800px;
+//   min-height: 200px;
+//   // background-color: white;
+//   border-radius: 20px;
+//   resize: vertical;
+//   border: 1px solid #EBEBEB;
+// }
+
+@media screen and (min-width: 700px) {
+  .profile_edit_container {  
+    label {
+      margin-left: 80px;
+    }
+    textarea, input {
+      min-width: 600px;
+      width: 80%;
+      margin: 20px auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+  }
+}
+
+@media screen and (max-width: 690px) {
+  textarea, trix-editor, #comment_content.sm {
+      min-width: 180px;
+      width: 80%;
+      margin: auto;
+      background-color: #f4f5f2;
+  }
+  .profile_edit_container {  
+      label {
+        margin-left: 20px;
+      }
+      textarea, input {
+        min-width: 300px;
+        width: 80%;
+        margin: 20px auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+      }
+  }
+  
+}
+
+// @media screen and (min-width: 960px) {
+//   .wrap {
+//     display: flex;
+//     flex-wrap: wrap;
+//     .item {
+//       padding: 8px;
+//       width: 31%;
+//     }
+//   }
+  
+// }
