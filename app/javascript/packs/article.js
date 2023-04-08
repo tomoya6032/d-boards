@@ -1,4 +1,3 @@
-
 import $ from 'jquery'
 import axios from 'modules/axios'
 import {
@@ -28,7 +27,9 @@ document.addEventListener('DOMContentLoaded', () => {
            $('.inactive-heart').removeClass('hidden')
          }
       })
- })
+    
+})
+
 
 
 
@@ -87,6 +88,6 @@ document.addEventListener('DOMContentLoaded', () => {
     listenActiveHeratEvent(articleId)
 
 
-  
+    
 })
 
