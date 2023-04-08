@@ -29,7 +29,7 @@
   .article_reactions
     - if user_signed_in?
       .article_heart.hidden.active-heart
-        = image_tag 'heart-active.svg'
+        = image_tag 'heart-active.svg'  
       .article_heart.hidden.inactive-heart
         = image_tag 'heart.svg'
       -# - if current_user.has_liked?(@article)
@@ -56,7 +56,9 @@
 .container
   .btn-secondary.show-comment-form
     コメントを追加
+
   .comment-text-area.hidden
+    
     = text_area_tag :comment_content, '', class: 'sm'
     .btn-secondary.add-comment-button
       コメントを追加

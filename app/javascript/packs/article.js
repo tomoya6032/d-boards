@@ -27,8 +27,8 @@ document.addEventListener('DOMContentLoaded', () => {
            $('.inactive-heart').removeClass('hidden')
          }
       })
-    
-})
+
+ })
 
 
 
@@ -41,10 +41,12 @@ const handleCommentForm = () => {
 }
 
 const appendNewComment = (comment) => {
+  
   $('.comments-container').append(
     `<div class="article_comment"><p>${comment.content}</p></div>`
-  )
-}
+    )
+  }
+
 
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -55,6 +57,7 @@ document.addEventListener('DOMContentLoaded', () => {
       .then((response) => {
         const comments = response.data
         comments.forEach((comment) => {
+          
             appendNewComment(comment)
             $('#comment_content').val('')
         });
@@ -77,7 +80,7 @@ document.addEventListener('DOMContentLoaded', () => {
         })
       }
     })
-
+    
     axios.get(`/articles/${articleId}/like`)
       .then((response) => {
          const hasLiked = response.data.hasLiked
@@ -88,6 +91,6 @@ document.addEventListener('DOMContentLoaded', () => {
     listenActiveHeratEvent(articleId)
 
 
-    
+
 })
 
