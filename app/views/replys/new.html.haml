@@ -1,13 +1,17 @@
+-# .index_container
+-#   %h2 返信してみよう！
+-# .reply_edit_container
+-#   %ul 
+-#     - @reply.errors.full_messages.each do |message|
+-#       %li= message 
+
+-#     = form_with(model: @reply, url: chat_replys_path(@reply.chat), local:true) do |f|
+-#       %div
+-#         = f.label :content, '内容'
+-#       %div 
+-#         = f.text_area :content
+-#       = f.submit '保存', class: 'btn-primary'
+
 .index_container
   %h2 返信してみよう！
-.container
-  %ul 
-    - @reply.errors.full_messages.each do |message|
-      %li= message 
-
-  = form_with(model: @reply, url: chat_replys_path(@reply.chat), local:true) do |f|
-    %div
-      = f.label :content, '内容'
-    %div 
-      = f.text_area :content
-    = f.submit '保存', class: 'btn-primary'
+= render 'form', reply: @reply

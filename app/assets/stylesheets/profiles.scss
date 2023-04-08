@@ -7,10 +7,12 @@
 // $image_size: 56px;
 
 
-.container.profilePage {
-    height: 350px;
-    margin-top: 0;
+.container_profilePage {
+    // height: 350px;
+    margin: 0 auto;
     padding-top: 0;
+    width: 90%;
+    
     h1 {
       background-color: #e7f5d4;
       margin: 0 16px 16px 16px;
@@ -45,9 +47,7 @@
   }
 }
 
-// .profile_item {
-//  max-width: 900px;
-// }
+
 
 .profile_card_detail > div:first-child {
   width: 45px; /* 片方のdivの幅 */
