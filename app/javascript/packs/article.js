@@ -23,19 +23,13 @@ const handleCommentForm = () => {
 //ここを直すとうまく表示されるはず↓
 
 const appendNewComment = (comment) => {
-  const avatarUrl = comment.user.avatar_url || '/path/to/default/avatar.png';
-  const nickname = comment.user.nickname || 'no-name'; // デフォルトのニックネームを設定
-
+ 
   $('.comments-container').append(
-    `<div class="comment">
-        <img class="avatar" src="${avatarUrl}" alt="アバター">
-        <div>
-          <strong>${nickname}</strong>
-          <p>${comment.content}</p>
-        </div>
-     </div>`
+    `<div class="article_comment"><p>${comment.content}</p></div>`
   )
 }
+
+
 
 document.addEventListener('DOMContentLoaded', () => {
   const dataset = document.getElementById('article-show').dataset;
@@ -50,6 +44,8 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     })
   handleCommentForm()
+
+
 
   $('.add-comment-button').on('click', () => {
     const content = $('#comment_content').val()
