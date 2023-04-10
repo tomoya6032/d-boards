@@ -31,9 +31,16 @@ class CommentsController < ApplicationController
       article = Article.find(params[:article_id])
       @comment = article.comments.build(comment_params)
       @comment.user = current_user
-      @comment.save!
+      # @comment.save!
      
-      render json: @comment
+      # render json: @comment
+      respond_to do |format|
+         if @comment.save
+           format.json { render json: { comment: @comment, profile: @comment.user.profile } }
+         else
+           format.json { render json: { errors: @comment.errors.full_messages }, status: :unprocessable_entity }
+         end
+       end
   
    end
   
