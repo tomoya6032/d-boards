@@ -22,12 +22,48 @@ const handleCommentForm = () => {
 
 //ここを直すとうまく表示されるはず↓
 
-const appendNewComment = (comment) => {
+// const appendNewComment = (comment) => {
  
-  $('.comments-container').append(
-    `<div class="article_comment"><p>${comment.content}</p></div>`
-  )
+//   $('.comments-container').append(
+//     `<div class="article_comment"><p>${comment.content}</p></div>`
+//   )
+// }
+
+const appendNewComment = (comment) => {
+  
+  // const avatarUrl = comment.user.avatar_url;
+  const avatarAlt = comment.user.name || 'No name';
+  
+  
+  $('.comments-container').append(`
+  <div class="article_comment">
+    <p>${comment.content}</p>
+  </div>
+`);
+
 }
+
+// const appendNewComment = (comment) => {
+//   // user_idから該当するユーザー情報を取得
+//   const userId = comment.user_id;
+//   const userUrl = '/users/' + userId + '.json';
+//   axios.get(userUrl)
+//     .then(response => {
+//       const userData = response.data;
+//       const avatarUrl = userData.avatar_url;
+//       const avatarAlt = userData.username;
+
+//       // HTMLにコメントとアバター画像を追加
+//       $('.comments-container').append(`
+//         <div class="article_comment">
+//           <img src="${avatarUrl}" alt="${avatarAlt}">
+//           <p>${comment.content}</p>
+//         </div>
+//       `);
+//     })
+//     .catch(error => console.log(error));
+// }
+
 
 
 
