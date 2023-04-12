@@ -19,7 +19,15 @@ class User < ApplicationRecord
     has_many :follower_relationships, foreign_key: 'following_id', class_name: 'Relationship', dependent: :destroy
     has_many :followers, through: :follower_relationships, source: :follower
 
+    include Rails.application.routes.url_helpers
 
+    def avatar_url
+      if avatar.attached?
+        rails_blob_path(avatar, only_path: true)
+      else
+        '../default-avatar.png' # デフォルトのアバター画像のパスを指定
+      end
+    end
   
     def has_written?(article)
       articles.exists?(id: article.id)
