@@ -9,16 +9,16 @@ class CommentsController < ApplicationController
       # comments = article.comments
       # render json: comments
       article = Article.find(params[:article_id])
-      comments = article.comments.includes(:user)
+      comments = article.comments
       render json: comments.to_json(include: :user)
    end
   
   
    def show
      
-      # @comment = Comment.find_by(id: params[:id])
-      # @user = User.find_by(id: @comment.user_id)
-      # @comments = @article.comments
+      @comment = Comment.find_by(id: params[:id])
+      @user = User.find_by(id: @comment.user_id)
+      @comments = @article.comments
    end
   
   
