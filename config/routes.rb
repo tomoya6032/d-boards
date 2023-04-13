@@ -33,4 +33,5 @@ Rails.application.routes.draw do
   resources :favorites, only: [:index]
   resource :profile, only: [:show, :edit, :update]
   
+  
 end

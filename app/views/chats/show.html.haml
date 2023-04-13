@@ -3,7 +3,8 @@
 .chat
   .chat_container
     .chat_detail
-      = image_tag @chat.user.avatar_image
+      = link_to account_path(@chat.user) do
+        = image_tag @chat.user.avatar_image
     %div
       %p= @chat.author_name
       %p= @chat.display_created_at
@@ -39,8 +40,9 @@
 .reply
   %h2 返信一覧
   - @reply.each do |reply|
-    .chat_reply
-      = image_tag reply.user.avatar_image
-      %p= reply.content
+    = link_to account_path(reply.user) do
+      .chat_reply
+        = image_tag reply.user.avatar_image
+        %p= reply.content
 
   
