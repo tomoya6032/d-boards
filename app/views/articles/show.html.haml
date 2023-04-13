@@ -49,10 +49,10 @@
   %h2 コメント一覧
   .comments-container  
     - @comment.each do |comment|
-      -# = link_to profile_path(current.user) do
-      .article_comment
-        = image_tag comment.user.avatar_image
-        %p= comment.content
+      = link_to account_path(comment.user) do
+        .article_comment
+          = image_tag comment.user.avatar_image
+          %p= comment.content
 
 .container
   .btn-secondary.show-comment-form
