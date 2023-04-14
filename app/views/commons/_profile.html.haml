@@ -25,7 +25,7 @@
   %h2 記事一覧
 .wrap
   .profile_item
-    - current_user.articles.each do |article| 
+    - user.articles.each do |article| 
       = link_to article_path(article) do
         .card
           - if article.eyecatch.attached? 
@@ -46,7 +46,7 @@
 .index_container
   %h2 チャット一覧
 .wrap
-  - current_user.chats.each do |chat| 
+  - user.chats.each do |chat| 
     = link_to chat_path(chat) do
       .chat_card
         .card_detail
@@ -61,7 +61,7 @@
   %h2 インフォメーション
 .wrap
   .profile_item
-    - current_user.informations.each do |information| 
+    - user.informations.each do |information| 
       = link_to information_path(information) do
         .card
           - if information.eyecatch.attached? 
