@@ -1,6 +1,8 @@
 class ChatsController < ApplicationController
-  before_action :set_chat, only: [:show]
-  before_action :authenticate_user!, only: [:new, :create, :edit, :update, :destroy]
+   before_action :set_chat, only: [:show]
+   before_action :authenticate_user!, only: [:new, :create, :edit, :update, :destroy]
+   
+   
    def index
      @chats = Chat.all
 
@@ -8,7 +10,7 @@ class ChatsController < ApplicationController
  
  
    def show
-    @reply = @chat.replys
+    # @reply = @chat.replys
  
    end
  

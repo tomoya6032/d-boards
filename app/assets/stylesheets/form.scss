@@ -25,7 +25,7 @@ label {
 
 
 textarea, trix-editor, #comment_content.sm {
-  width: 90%;
+  width: 100%;
   margin: 20px 8px;
   // margin-top: 50px;
   font-size: 16px; 
@@ -48,7 +48,11 @@ textarea, trix-editor, #comment_content.sm {
    margin-top: 30px;
 }
 
-
+.comment_container {
+  justify-content: center;
+  width: 90%;
+  margin: 0 auto;
+}
 
 .form_container {
   display: flex;
