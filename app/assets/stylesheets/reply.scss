@@ -18,14 +18,27 @@
 // }
 
 .chat_reply_heart {
-    position: absolute;
-    bottom: 16px;
-    display: flex;
+  display: flex;
+  justify-content: flex-end; 
+  padding-bottom: 0;
+}
+
+.chat_heart {
+    padding-right: 30px;
     img {
-      width: 20px;
-      height: 20px;
+      width: 30px;
+      height: 30px;
     }
 }
+.chat_heart_count {
+    &_P {
+      align-items: flex-end;
+    }
+    position: fixed;
+    padding-bottom: 0; 
+    padding-right: 10px;
+}
+
 
 .reply_edit_container {
   width: 90%;

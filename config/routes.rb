@@ -20,8 +20,8 @@ Rails.application.routes.draw do
 
 
   resources :chats do
-    resources :replys, only: [:index, :new, :show, :edit, :create, :update, :destroy]
-    resource :favorites, only: [:create, :destroy]
+    resources :replies, only: [:index, :new, :show, :edit, :create, :update, :destroy]
+    resource :favorite, only: [:show, :create, :destroy]
   end
   
   resources :informations do
@@ -30,7 +30,7 @@ Rails.application.routes.draw do
   
   resources :lectures, only: [:index, :new, :show, :edit, :create, :update, :destroy]
   
-  resources :favorites, only: [:index]
+  # resources :favorites, only: [:index]
   resource :profile, only: [:show, :edit, :update]
   
   

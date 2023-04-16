@@ -10,7 +10,7 @@ class User < ApplicationRecord
     has_one :profile, dependent: :destroy
     has_many :comments, dependent: :destroy
     has_many :chats, dependent: :destroy
-    has_many :replys, dependent: :destroy
+    has_many :replies, dependent: :destroy
     has_many :informations, dependent: :destroy
     has_one_attached :avatar, dependent: :destroy
 
@@ -22,13 +22,13 @@ class User < ApplicationRecord
 
     include Rails.application.routes.url_helpers
 
-    def avatar_url
-      if avatar.attached?
-        rails_blob_path(avatar, only_path: true)
-      else
-        '../default-avatar.png' # デフォルトのアバター画像のパスを指定
-      end
-    end
+    # def avatar_url
+    #   if avatar.attached?
+    #     rails_blob_path(avatar, only_path: true)
+    #   else
+    #     '../default-avatar.png' # デフォルトのアバター画像のパスを指定
+    #   end
+    # end
   
     def has_written?(article)
       articles.exists?(id: article.id)

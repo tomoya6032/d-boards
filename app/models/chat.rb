@@ -1,8 +1,11 @@
 class Chat < ApplicationRecord
-  has_many :replys
+  
   belongs_to :user
+  has_many :replies
   has_many :favorites, dependent: :destroy
+  
   has_rich_text :content
+
 
   # validates :content, presence: true
   # validates :content, uniqueness: true

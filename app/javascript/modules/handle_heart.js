@@ -1,10 +1,5 @@
 import $ from 'jquery'
-import axios from 'axios'
-import 'trix/dist/trix.css'
-import { csrfToken } from 'rails-ujs'
-
-axios.defaults.headers.common['X-CSRF-Token'] = csrfToken()
-
+import axios from 'modules/axios'
 
 
 const listenInactiveHeratEvent = (articleId) => {
