@@ -32,11 +32,11 @@
 .reply
   %h2 返信一覧
   .replies-container
-    -# - @replies.each do |reply|
-    -#   = link_to account_path(reply.user) do
-    -#     .chat_reply
-    -#       = image_tag reply.user.avatar_image
-    -#       %p= reply.content
+    - @reply.each do |reply|
+      = link_to account_path(reply.user) do
+        .chat_reply
+          = image_tag reply.user.avatar_image
+          %p= reply.content
 
 .container
   .btn-secondary.show-reply-form

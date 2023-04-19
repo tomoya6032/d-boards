@@ -10,7 +10,7 @@ class ChatsController < ApplicationController
  
  
    def show
-    # @reply = @chat.replys
+    @reply = @chat.replies
  
    end
  

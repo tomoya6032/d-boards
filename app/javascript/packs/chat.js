@@ -32,13 +32,13 @@ document.addEventListener('DOMContentLoaded', () => {
   const dataset = document.getElementById('chat-show').dataset;
   const chatId = dataset.chatId;
 
-  axios.get(`/chats/${chatId}/replies`)
-    .then((response) => {
-      const replies = response.data;
-      replies.forEach((reply) => {
-        appendNewReply(reply);
-      });
-    });
+  // axios.get(`/chats/${chatId}/replies`)
+  //   .then((response) => {
+  //     const replies = response.data;
+  //     replies.forEach((replies) => {
+  //       appendNewReply(reply);
+  //     });
+  //   });
 
   handleReplyForm();
 

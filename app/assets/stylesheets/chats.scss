@@ -128,7 +128,8 @@
     white-space: pre-wrap;
     font-size: 30px;
   }
-  padding-bottom: 20px;
+  // padding-bottom: 0px;
+  // position: relative;
 }
 
 
@@ -280,18 +281,34 @@
   }
   
   &_heart {
-    margin-left: 20px;
+    // margin-left: 20px;
   }
 }
 
-.reactions {
-  display: flex;
-  padding: 10px 0px;
+// .reactions {
+//   display: flex;
+//   padding: 10px 0px;
+// }
+
+.chat_heart {
+  margin-right: 0px;
+  // position: fixed;
+  // padding-bottom: 0; 
+  // padding-right: 0px;
 }
 
-.heart_count {
-  margin-left: 10px;
-  text-align: center;
+.chat_reply_heart {
+ margin-bottom: 0;
+ 
+}
+
+
+.chat_heart_count{
+  color: black;
   padding-top: 10px;
+  // position: fixed;
+  // align-items: flex-end;
+  margin-right: 10px;
+  // margin-left: auto;
+  padding-bottom: 0;
 }
-
