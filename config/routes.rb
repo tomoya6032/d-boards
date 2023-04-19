@@ -6,6 +6,9 @@ Rails.application.routes.draw do
    root to: 'toppage#index'
    resource :timeline, only: [:show]
 
+   get '/history', to: 'chat_histories#show'
+   resource :history, only: [:show]
+
 
   resources :articles do
     resources :comments, only: [:index, :new, :show, :edit, :create, :update, :destroy]

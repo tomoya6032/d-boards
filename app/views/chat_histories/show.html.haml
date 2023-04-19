@@ -1,0 +1,19 @@
+.chats 
+  .chats_container
+    .index_container
+      %h2 記事一覧
+
+    .tabs
+      = render 'commons/chat_tabs'
+    .wrap
+      - @chats.each do |chat|
+        = render 'commons/chat', chat: chat
+  
+  .new_chat_container
+    = link_to new_chat_path do
+      .chat_new
+        %p + 新しい記事を作成
+  
+  = link_to new_chat_path do
+    .float_btn
+      %i.fa.fa-pencil
