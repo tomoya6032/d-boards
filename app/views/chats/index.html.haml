@@ -2,6 +2,8 @@
   .chats_container
     .index_container
       %h2 chat一覧を表示
+    .tabs
+      = render 'commons/chat_tabs'
     .wrap
       - @chats.each do |chat|
         = render 'commons/chat', chat: chat 
