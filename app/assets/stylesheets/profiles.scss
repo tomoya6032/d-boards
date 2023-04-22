@@ -15,8 +15,8 @@
     
     h1 {
       background-color: #e7f5d4;
-      margin: 0 16px 16px 16px;
-      margin-left: 0;
+      // margin: 0 16px 16px 16px;
+      // margin-left: 0;
       padding-left: 20px;
       box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
       position: relative;
@@ -26,6 +26,26 @@
       font-size: 25px;
     }
 }
+
+.profilePage_user {
+  width: 90%;
+  margin: 0 auto;
+  
+}
+
+.profile_item {
+  width: 90%;
+  margin: 0px auto; 
+}
+
+
+
+.wrap_profile_chat {
+  width: 90%;
+  margin: 0px auto; 
+}
+
+
 .profilePage_user_displayName {
   padding-top: 15px;
   padding-right: 10px;
@@ -116,31 +136,56 @@
   }
 }
 
-// .profile_item {
-//   height: 300px;
-
-// }
 
 // @media screen and (min-width: 600px) {
-//   .wrap {
-//     display: flex;
-//     flex-wrap: wrap;  
-//     .profile_item {
-//       padding: 8px;
-//       width: 45%;
-//     }
-//   }
-  
-// }
+  // .wrap {
+  //   display: flex;
+  //   flex-wrap: wrap;  
+  //   .item {
+  //     padding: 8px;
+  //     width: 45%;
+  //   }
+  // }
+  // .wrap_profile_chat {
+  //   display: flex;
+  //   flex-wrap: wrap;  
+  //   .item {
+  //     padding: 8px;
+  //     width: 45%;
+  //   }
+  // }
 
-// @media screen and (min-width: 960px) {
-//   .wrap {
-//     display: flex;
-//     flex-wrap: wrap;  
-//     .profile_item {
-//       padding: 8px;
-//       width: 31%;
-//     }
-//   }
+
+  // @media screen and (max-width: 600px) {
+  //   .article {
+  //     background-color: white;
+  //     margin: 16px 16px;
+  //     padding: 22px 22px;
+  //     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+  //     position: relative;
+  //     border-radius: 20px;
+  //     width: 80%;
+  //     margin: 30px auto;
+    
+  //      &_image {
+  //        height: 360px;
+  //        position: relative;
+  //        overflow: hidden;
+  //        margin: 22px * -1 22px *-1 16px;
+  //      }
+       
+  //   }
+    
+  // }
   
-// }
+  // @media screen and (min-width: 960px) {
+  //   .wrap_profile_article {
+  //     display: flex;
+  //     flex-direction: column;
+  //     .profile_item {
+  //       padding: 8px;
+  //       width: 31%;
+  //     }
+  //   }
+    
+  // }
