@@ -4,8 +4,8 @@
       .card_detail
         %div
           = image_tag chat.user.avatar_image 
-        %div
-          = truncate(chat.content.to_plain_text, length: 13, class: "truncate")
+        %card_detail_text
+          = truncate(chat.content.to_plain_text, length: 16, class: "truncate")
         
         -# = truncate(chat.content, length:25) 
         -# =h chat.content

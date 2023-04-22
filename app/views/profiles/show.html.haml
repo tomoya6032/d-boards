@@ -13,7 +13,7 @@
         = current_user.profile&.introduction
 .index_container
   %h2 記事一覧
-.wrap
+.wrap_profile_article
   .profile_item
     - current_user.articles.each do |article| 
       = link_to article_path(article) do
@@ -35,7 +35,7 @@
 
 .index_container
   %h2 チャット一覧
-.wrap
+.wrap_profile_chat
   - current_user.chats.each do |chat| 
     = link_to chat_path(chat) do
       .chat_card

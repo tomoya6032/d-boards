@@ -184,6 +184,8 @@ a {
   border-radius: 30px;
   height: 60px;
   line-height:60px;
+  width: 90%;
+  margin: 0 auto;
   h2 {
     margin-left: 20px;
   }
@@ -223,11 +225,29 @@ a {
       width: 45%;
     }
   }
+  .wrap_profile_chat {
+    display: flex;
+    flex-wrap: wrap;  
+    .item {
+      padding: 8px;
+      width: 45%;
+    }
+  }
+  
   
 }
 
 @media screen and (min-width: 960px) {
   .wrap {
+    display: flex;
+    flex-wrap: wrap;
+    .item {
+      padding: 8px;
+      width: 31%;
+    }
+  }
+
+  .wrap_profile_chat {
     display: flex;
     flex-wrap: wrap;
     .item {
