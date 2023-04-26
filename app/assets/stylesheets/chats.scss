@@ -3,11 +3,14 @@
 // You can use Sass (SCSS) here: https://sass-lang.com/
 
 .chats_container {
-  
   h2 {
     margin-left: 20px;
   }
-  
+}
+
+.wrap {
+  width: 90%;
+  margin: auto;
 }
 
 .new_chat_container {
@@ -74,15 +77,12 @@
     font-size: 50px;
     
     img {
+     
       width: 40px;
       height: 40px;
     }
   } 
 }
-
-// .card_detail {
-//   display: flex;
-// }
 
 .card_detail {
   display: flex;
@@ -109,18 +109,18 @@
 .chat_container {
    display: flex;
    width: 100%;
-   height:180;
+   height: 50px;
    padding:5px;
    padding-left: 0;
    margin-left: 0px;
    justify-content: flex-start;
+   p {
+    margin-top: 0;
+    margin-bottom: 2px;
+   }
 }
 
-.div {
-  p {
-   font-size: 10px;
-  }
-}
+
 
 .card_detail_text {
   padding-left: 30px;
@@ -251,22 +251,13 @@
   
   &_detail {
     padding: 5px;
-    // display: flex;
-    // justify-content: flex-start;
-    // align-items: center; 
-    p {
-      font-size: 18px;
-     }
-    font-size: 12px;
     position: relative;
-    // margin: 0 auto;
-    // padding-right: 20px;
     width: 70px;
   
     img {
       cursor: pointer;
-      width: 50px;
-      height: 50px;
+      width: 40px;
+      height: 40px;
       border-radius: 100%;
       margin-left: 0px;
       position: absolute;
@@ -281,6 +272,7 @@
     &_img {
       size: 50%;
     }
+
   }
   
   &_card_content {

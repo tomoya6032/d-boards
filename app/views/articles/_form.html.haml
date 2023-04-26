@@ -1,18 +1,18 @@
-.container
+.article_container
   %ul
     - @article.errors.full_messages.each do |message|
       %li= message
   = form_with(model: article, local: true) do |f|
     %div 
-      = f.label :eyecatch, 'アイキャッチ'
+      = f.label :eyecatch, 'アイキャッチ画像'
     %div 
       = f.file_field :eyecatch 
     %div
-      = f.label :title, 'Name'
+      = f.label :title, 'タイトル'
     %div
       = f.text_field :title, class: 'text'
     %div
-      = f.label :content, 'Description'
+      = f.label :content, '本文'
     %div.rich
       = f.rich_text_area :content
     

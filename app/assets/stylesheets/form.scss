@@ -1,34 +1,43 @@
 @import 'variables';
 
+.article_container {
+  width: 90%;
+  margin: auto;
+}
   
 input, select {
+  width: 80%;
   margin: 10px 2px;
   padding: 10px 2px;
   
   &.text {
+    margin: 0 auto;
     height: 100%;
     width: 90%;
-    margin: 20px 8px;
-    padding: 16px 5px;
+    margin: 20px;
+    padding: 16px;
     border: 2px solid #EBEBEB;
+    
   }
 }
+
+
 
 label {
   font-size: 18px;
   background-color: #e7f5d4;
   padding: 5px 20px;
   
-  margin: 30px 5px;
+  margin: 30px 20px;
   border-radius: 20px;
 }
 
 
 textarea, trix-editor, #comment_content.sm {
-  width: 100%;
+  width: 90%;
   margin: 20px 8px;
   // margin-top: 50px;
-  font-size: 16px; 
+  font-size: 18px; 
   padding: 8px 8px;
   min-width: 800px;
   min-height: 300px;
@@ -45,7 +54,9 @@ textarea, trix-editor, #comment_content.sm {
 }
 
 .rich {
-   margin-top: 30px;
+ width: 100%;
+ 
+  margin-top: 30px; 
 }
 
 .comment_container {
@@ -135,6 +146,7 @@ textarea, trix-editor, #comment_content.sm {
         min-width: 300px;
         width: 80%;
         margin: 20px auto;
+        
         display: flex;
         justify-content: center;
         align-items: center;
