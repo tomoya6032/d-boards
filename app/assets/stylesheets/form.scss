@@ -33,15 +33,15 @@ label {
 }
 
 
-textarea, trix-editor, #comment_content.sm {
+textarea, trix-editor {
   width: 90%;
   margin: 20px 8px;
   // margin-top: 50px;
   font-size: 18px; 
   padding: 8px 8px;
-  min-width: 800px;
+  // min-width: 800px;
   min-height: 300px;
-  // margin: 0 auto;
+  margin: 0 auto;
   // text-align: center;
   background-color: white;
   border-radius: 10px;
@@ -59,11 +59,7 @@ textarea, trix-editor, #comment_content.sm {
   margin-top: 30px; 
 }
 
-.comment_container {
-  justify-content: center;
-  width: 90%;
-  margin: 0 auto;
-}
+
 
 .form_container {
   display: flex;
@@ -91,7 +87,7 @@ textarea, trix-editor, #comment_content.sm {
 
 /* コメント入力エリアのスタイル */
 .comment-text-area {
-  width: 90%;
+  width: 100%;
   /* ここにテキストエリアのスタイルを追加することができます */
 }
 

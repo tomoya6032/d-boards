@@ -12,8 +12,14 @@
   
 }
 
-.chat_content_container {
-  // position: relative;
+.reply_container {
+  width: 80%;
+  margin: 30px auto;
+}
+
+.reply-text-area {
+  width: 80%;
+  margin: auto;
 }
 
 .chat_reply_heart {
@@ -46,15 +52,27 @@
   border: 1px solid #EBEBEB;
 }
 
-@media screen and (min-width: 350px) {
+.reply-text-area {
+  width: 100%;
+  margin: 20px auto;
+ 
+}
+
+.btn-secondary {
+  width: 80%;
+  margin: 20px auto;
+  
+}
+
+@media screen and (max-width: 500px) {
   .textarea, trix-editor,#reply_content {
-      min-width: 200px;
+      // min-width: 350px;
       width: 90%;
-      margin: 0 auto;
+      margin: auto;
       background-color: #f4f5f2;
    }
    .reply_container {
       margin: 0 auto;
-      width: 300px;
+      width: 80%;
    }
 }
