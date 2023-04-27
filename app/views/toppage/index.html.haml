@@ -2,25 +2,48 @@
   .top_container
     %h2 TOPページ
 
+
   .section_container
     = link_to articles_path do
-      %h3 記事
-      %p 災害時・平時にできることを<br>記事にまとめています<br>内容一覧へ
-  
+      .link_inner
+        .link_image
+          = image_tag 'default-eyecatch.jpg'
+        .link_text
+          %h3 記事
+          %p 災害時・平時にできることを記事にまとめています
+          %p 内容一覧へ
+       
+    
   .section_container
     = link_to chats_path do
-      %h3 チャット
-      %p 誰かの知恵を借りたい時に使う<br>コミュニティチャット一覧へ
+      .link_inner
+        .link_image
+          = image_tag 'default-eyecatch.jpg'
+        .link_text
+          %h3 チャット
+          %p 誰かの知恵を借りたい時に使う
+          %p コミュニティチャット一覧へ
+
 
   .section_container
     = link_to informations_path do
-      %h3 研修報告
-      %p 研修・講演などの情報共有事項<br>内容一覧へ
+      .link_inner
+        .link_image
+          = image_tag 'default-eyecatch.jpg'
+        .link_text
+          %h3 研修報告
+          %p 研修・講演などの情報共有事項
+          %p 内容一覧へ
 
   .section_container
     = link_to lectures_path do
-      %h3 災害時、平時に<br>私たちにできること
-      %p 災害発生に備えて取り組むこと<br>内容一覧へ
+      .link_inner
+        .link_image
+          = image_tag 'default-eyecatch.jpg'
+        .link_text
+          %h3 災害時、平時に私たちにできること
+          %p 災害発生に備えて取り組むこと
+          %p 内容一覧へ
 
 
 
