@@ -6,7 +6,7 @@
       = image_tag @article.eyecatch
   - else
     .card_image
-      = image_tag 'default-eyecatch.jpg', size: '200*200'
+      = image_tag 'default-eyecatch.jpg', size: '100*100'
 
   .article_detail
     = link_to account_path(@article.user) do
