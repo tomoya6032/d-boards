@@ -52,6 +52,7 @@
     p {
       padding-bottom: 0;
       margin-bottom: 5px;
+     
     }
 
     h2 {
@@ -118,7 +119,16 @@
       right: 16px;
       bottom: 16px;
     }
+}
+
+
+.card_articl_detail {
+  p {
+    font-size: 14px;
+    margin: 5px;
   }
+}
+
 
 .card_image {
    height: 600px;
