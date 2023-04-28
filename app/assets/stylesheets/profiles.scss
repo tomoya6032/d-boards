@@ -13,6 +13,8 @@
     padding-top: 0;
     width: 90%;
     
+
+    
     h1 {
       background-color: #e7f5d4;
       // margin: 0 16px 16px 16px;
@@ -30,12 +32,13 @@
 .profilePage_user {
   width: 90%;
   margin: 0 auto;
-  
+  margin-top: 30px;
 }
 
 .profile_item {
   width: 90%;
   margin: 0px auto; 
+  margin-top: 30px;
 }
 
 
@@ -43,6 +46,7 @@
 .wrap_profile_chat {
   width: 90%;
   margin: 0px auto; 
+  margin-top: 30px;
 }
 
 
@@ -56,7 +60,7 @@
   padding-top: 12px;
   cursor: pointer;
   display: flex;
-  font-size: 10px;
+  font-size: 14px;
   align-items: center; 
 
   img {
@@ -64,6 +68,10 @@
     height: 40px;
     border-radius: 100%;
     margin-right: 8px;
+  }
+  p {
+    margin-bottom: 4px;
+    margin-top: 4px;
   }
 }
 
@@ -87,8 +95,8 @@
     &_image {
       display: flex;
       flex-direction: column;
-      padding-top: 10px;
-      padding-left: 10px;
+      padding-top: 20px;
+      padding-left: 20px;
 
       img {
         width: 50px;
@@ -137,23 +145,35 @@
 }
 
 
-// @media screen and (min-width: 600px) {
-  // .wrap {
-  //   display: flex;
-  //   flex-wrap: wrap;  
-  //   .item {
-  //     padding: 8px;
-  //     width: 45%;
-  //   }
-  // }
-  // .wrap_profile_chat {
-  //   display: flex;
-  //   flex-wrap: wrap;  
-  //   .item {
-  //     padding: 8px;
-  //     width: 45%;
-  //   }
-  // }
+@media screen and (min-width: 600px) {
+  .profile_item {
+    width: 90%;
+    display: flex;
+    flex-wrap: wrap; 
+    margin: 20px; 
+    justify-content: center; 
+    padding-left: 30px;
+    // display: inline-block;
+    
+    .card {
+      padding: 8px;
+      margin-right: 50px;
+      width: 300px;
+      // margin: auto;
+    }
+  }
+  .wrap_profile_chat {
+    display: flex;
+    flex-wrap: wrap; 
+    
+    // margin: 20px auto;  
+    .item {
+      padding: 8px;
+      width: 45%;
+    }
+  }
+
+}
 
 
   // @media screen and (max-width: 600px) {
