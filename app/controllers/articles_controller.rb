@@ -2,7 +2,7 @@ class ArticlesController < ApplicationController
   
 
   before_action :set_article, only: [:show]
-  before_action :authenticate_user!, only: [:new, :create, :edit, :update, :destroy]
+  before_action :authenticate_user!, only: [:new, :show, :create, :edit, :update, :destroy]
 
     def index
       @articles = Article.all
@@ -12,7 +12,7 @@ class ArticlesController < ApplicationController
 
     def show
       @comment = @article.comments
-      
+      @user = @article.user 
     end
 
     
@@ -36,7 +36,7 @@ class ArticlesController < ApplicationController
 
     def edit
       @article = current_user.articles.find(params[:id])
-
+      @user = @article.user 
     end
 
 
