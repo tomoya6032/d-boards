@@ -11,7 +11,7 @@ class ChatsController < ApplicationController
  
    def show
     @reply = @chat.replies
- 
+    @user = @chat.user 
    end
  
  

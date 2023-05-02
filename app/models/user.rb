@@ -71,7 +71,7 @@ class User < ApplicationRecord
       #   user_id = user
       # end  
       user_id = get_user_id(user)
-      relation = following_relationships.find_by!(following_id: user_id)
+      relation = following_relationships.find_by(following_id: user_id)
       relation.destroy!
     end
   
