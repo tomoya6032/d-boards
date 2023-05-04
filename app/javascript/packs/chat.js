@@ -7,7 +7,7 @@ import {
 
 const handleFavoriteDisplay = (hasFavorited) => {
   if (hasFavorited) {
-    $('.active-heart').removeClass('hidden');
+   $('.active-heart').removeClass('hidden');
   } else {
     $('.inactive-heart').removeClass('hidden');
   }
