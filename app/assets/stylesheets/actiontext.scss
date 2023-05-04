@@ -39,6 +39,9 @@
     color: white;
   }
 
-  
+  a[href] {
+    color: blue;
+    text-decoration: underline;
+  }
 
 }
