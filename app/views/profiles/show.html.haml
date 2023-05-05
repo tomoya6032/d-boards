@@ -26,7 +26,8 @@
               = image_tag 'default-eyecatch.jpg'
           .card_content
             .card_title
-              = article.title
+              -# = article.title
+              = truncate(article.title, length:13)
               .profile_card_detail
                 = image_tag article.user.avatar_image
                 %div
@@ -62,7 +63,8 @@
               = image_tag 'default-eyecatch.jpg'
           .card_content
             .card_title
-              = information.title
+              -# = information.title
+              = truncate(information.title, length:13)
 
               .profile_card_detail
                 = image_tag information.user.avatar_image
