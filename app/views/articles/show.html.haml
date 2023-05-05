@@ -34,6 +34,9 @@
   .article_content
     -# %p content:
     %p=h @article.content.body
+    - if @article.image.attached?
+      = image_tag @article.image.variant(resize_to_fill: [300, 300]), width: 300, height: 300
+
   .article_reactions
     - if user_signed_in?
       .article_heart.hidden.active-heart

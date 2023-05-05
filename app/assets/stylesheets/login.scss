@@ -3,7 +3,7 @@
     // text-align: center;
     h2 {
       margin: 20px auto;
-      width: 80%;
+    //   width: 80%;
     }
     .field {
       margin: 20px auto;
@@ -15,6 +15,14 @@
     }
     &_a {
       margin: 20px auto;
-      width: 80%;
+    //   width: 80%;
     }
+}
+
+.login-link,
+.signup-link,
+.forgot-password-link {
+  color: white;
+  font-size: 22px;
+  border-bottom: 1px solid white; 
 }
