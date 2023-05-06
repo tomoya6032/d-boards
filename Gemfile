@@ -29,9 +29,11 @@ gem 'annotate'
 gem 'active_model_serializers'
 gem 'better_errors'
 gem 'aws-sdk-s3', require: false
-gem  'google-analytics-rails'
+gem 'google-analytics-rails'
+gem 'active_decorator'
+gem 'trix'
 
-gem 'actiontext'
+# gem 'actiontext'
 # Use Active Storage variant
 gem 'image_processing', '~> 1.2'
 
