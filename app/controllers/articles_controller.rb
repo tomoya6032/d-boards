@@ -26,6 +26,7 @@ class ArticlesController < ApplicationController
       @article = current_user.articles.build(article_params)
       
       if @article.save
+        @article.image.attach(params[:article][:image])
         redirect_to article_path(@article), notice: '保存ができたよ'
       else
         flash.now[:error] = '保存に失敗しました'
@@ -61,7 +62,7 @@ class ArticlesController < ApplicationController
 
     private
     def article_params
-      params.require(:article).permit(:title, :content, :eyecatch)
+      params.require(:article).permit(:title, :content, :eyecatch, :image)
     end
 
     def set_article
