@@ -33,15 +33,11 @@
   %h1.article_title= @article.title
   .article_content
     -# %p content:
-    -# %p=h @article.content.body
-    -# - if @article.images.attached?
-    -#   = image_tag @article.images.variant(resize_to_fill: [300, 300]), width: 300, height: 300
-
     %p=h @article.content.body
-- if @article.images.attached?
-  - @article.images.each do |image|
-    = image_tag image.variant(resize_to_fill: [300, 300]), width: 300, height: 300
+    - if @article.images.attached?
+      = image_tag @article.images.variant(resize_to_fill: [300, 300]), width: 300, height: 300
 
+ 
 
 
   .article_reactions
