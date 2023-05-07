@@ -82,13 +82,13 @@
 }
 
 .profilePage {
-  margin-top: 24px;
-  height: 300px;
+  // margin-top: 24px;
+  // height: 600px;
 
   &_user {
     display: flex;
     background-color: rgb(228, 246, 249);
-    height: 300px;
+    height: auto;
     border-radius: 10px;
 
     &_image {
@@ -112,42 +112,49 @@
     }
 
     &_actionButton {
-      margin-top: 10px;
+      margin: 10px;
+      margin-right: 10px;
       background-color: #f4999d;
       box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
       display: flex;
       flex-direction: column;
       justify-content: center;
-      font-size: 16px;
+      font-size: 14px;
       border-radius: 4px;
       border: 2px solid rgb(244, 95, 95);
       font-weight: bold;
-      padding: 0px 8px;
+      padding: 6px 12px;
+      width: 100px;
 
       a {
         color: rgb(246, 246, 246);
+        margin: auto;
+
       }
     }
 
     &_name {
-      display: flex;
+      // display: flex;
       margin-bottom: 8px;
     }
 
     &_displayName {
-      font-size: 18px;
+      font-size: 16px;
       font-weight: bold;
-      margin-right: 8px;
+      margin-right: 2px;
     }
 
     &_introduction {
       font-size: 16px;
+      width: 90%;
+      min-height: 200px;
+      margin-top: 30px;
     }
   }
 }
 
 .profilePage_user_introduction p {
-  width: 90%;
+  // width: 90%;
 }
 
 
