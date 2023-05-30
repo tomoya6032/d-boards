@@ -5,14 +5,17 @@
 
     .tabs
       = render 'commons/tabs'
+
+    .new_article_container
+      = link_to new_article_path do
+        .article_new
+          %p + 新しい記事を作成
+
     .wrap
       - @articles.each do |article|
         = render 'commons/article', article: article
   
-  .new_article_container
-    = link_to new_article_path do
-      .article_new
-        %p + 新しい記事を作成
+  
   
   = link_to new_article_path do
     .float_btn

@@ -16,18 +16,16 @@
 }
 
 .new_chat_container {
-    color: #FFFFFF;
-    font-size: 24px;
+    font-size: 18px;
     font-weight: bold;
     color: #000;
     cursor: pointer;
-    margin: 16px 16px 16px 16px;
     padding: 16px;
-    width: 40%;
+    width: 60%;
     height: 40px;
     border-style: dotted;
     display: flex;
-    margin: 50px auto;
+    margin: 30px auto;
     justify-content: center;
     align-items: center;
     background-color: #f4999d;
@@ -141,7 +139,7 @@
 
 .chat_container {
    display: flex;
-   width: 100%;
+   width: 95%;
    height: 50px;
    padding:5px;
    padding-left: 0;
@@ -159,6 +157,7 @@
 .card_detail_text {
   padding-left: 20px;
 }
+
 
 .chat_content_container {
   padding-left: 30px;
