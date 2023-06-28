@@ -62,12 +62,10 @@
   
     &_title {
       font-size: 18px;
-      border-bottom: 1px solid #000;
+      border-bottom: 1px solid rgb(46, 163, 246);
       padding-bottom: 20px;
-      margin-bottom: 30px;
+      margin: 30px auto;
       width: 90%;
-      
-      margin: 0 auto;
     }
   
     &_comment {
@@ -304,6 +302,11 @@
 //   width: 70%;
 //   margin: 0 auto;
 // }
+.back-to-articles {
+  display: flex;
+  justify-content: flex-end;
+  
+}
 
 
 @media screen and (max-width: 600px) {

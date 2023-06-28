@@ -1,12 +1,18 @@
-.index_container
-  %h2 災害関連研修等詳細ページ
+.top_index
+  .index_container
+    %h2 災害関連研修等詳細ページ
+  = link_to informations_path do
+    .back-to-articles
+      .btn-primary
+        %p ＜ 一覧に戻る 
+
 .information
   - if @information.eyecatch.attached?
     .information_image
       = image_tag @information.eyecatch
   - else
     .card_image
-      = image_tag 'default-eyecatch.jpg', size: '200*200'
+      = image_tag 'default-eyecatch.jpg'
 
   .information_detail
     = image_tag @information.user.avatar_image
@@ -20,9 +26,9 @@
           .dropdown-content.mini
             = link_to '編集する', edit_information_path(@information)
             = link_to '削除する', information_path(@information), data: { method: 'delete', confirm: '本当に削除してもよろしいですか？' }
-  .information_title
-    %p ---- title ----
-    %h2.information_title= @information.title
+  
+  %h1.information_title= @information.title
   .information_content
-    %p ---- content ----
-    %p= @information.content
+    %p=h @information.content
+    -# - if @information.images.attached?
+    -#   = image_tag @information.images.variant(resize_to_fill: [300, 300]), width: 300, height: 300
