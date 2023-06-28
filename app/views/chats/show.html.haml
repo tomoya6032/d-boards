@@ -1,5 +1,12 @@
-.index_container
-  %h2 チャット詳細ページ
+.top_index
+  .index_container
+    %h2 チャット詳細ページ
+
+  = link_to chats_path do
+    .back-to-articles
+      .btn-primary
+        %p ＜ 一覧に戻る 
+         
 .chat#chat-show{data: {chat_id: @chat.id}}
   .chat_container
     .chat_detail

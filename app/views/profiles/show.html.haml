@@ -54,7 +54,7 @@
                   %p= chat.display_created_at
 .index_container
   %h2 インフォメーション
-.wrap
+.wrap_profile_information 
   .profile_item
     - current_user.informations.order(created_at: :desc).each do |information|
     
@@ -69,7 +69,7 @@
           .card_content
             .card_title
               -# = information.title
-              = truncate(information.title, length:13)
+              = truncate(information.title, length:12)
 
               .profile_card_detail
                 = image_tag information.user.avatar_image

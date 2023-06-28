@@ -4,12 +4,15 @@
     background-color: #f4999d;
     border: none;
     border-radius: 10px;
-    width: 100%;
+    width: 100px;
     text-align: center;
     color: rgb(246, 246, 246);
-    padding: 16px 0;
+    padding: 5px 5px;
+    // margin-r: 20px;
     font-weight: bold;
-    font-size: 25px;
+    
+    font-size: 14px;
+
   }
 
 .btn-secondary {
@@ -24,3 +27,15 @@
 }
 
 
+.btn-save {
+  background-color: #f4999d;
+    border: none;
+    border-radius: 10px;
+    width: 80%;
+    margin: 20px auto;
+    // float: center;
+    color: rgb(246, 246, 246);
+    padding: 16px 0;
+    font-weight: bold;
+    font-size: 25px;
+}

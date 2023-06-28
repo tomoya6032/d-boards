@@ -10,7 +10,7 @@ class InformationsController < ApplicationController
    
    
       def show
-      
+        @user = @information.user 
    
       end
    
