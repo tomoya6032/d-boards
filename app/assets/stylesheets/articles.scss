@@ -179,11 +179,8 @@
     list-style: none;
     display: flex;
     flex-wrap: wrap;
-    max-width: 200px;
-    // &_text {
-    //   font-size: 100px;
-    //   word-wrap: break-word;
-    // }
+    max-width: 100%;
+   
   }
 
   &_heart {
