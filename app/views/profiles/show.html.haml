@@ -16,7 +16,7 @@
   %h2 記事一覧
 .wrap_profile_article
   .profile_item
-    - current_user.articles.each do |article| 
+    - current_user.articles.order(created_at: :desc).each do |article|
       = link_to article_path(article) do
         .card
           - if article.eyecatch.attached? 
@@ -38,7 +38,7 @@
 .index_container
   %h2 チャット一覧
 .wrap_profile_chat
-  - current_user.chats.each do |chat| 
+  - current_user.chats.order(created_at: :desc).each do |chat|
     = link_to chat_path(chat) do
       .chat_card
         .card_detail
@@ -47,13 +47,17 @@
               = image_tag chat.user.avatar_image 
           %div
             .chat_card_content
-              = truncate(chat.content.to_plain_text, length: 13, class: "truncate")
-
+              = truncate(chat.content.to_plain_text, length: 16, class: "truncate")
+              .chat_display
+                %div
+                  %p= chat.author_name
+                  %p= chat.display_created_at
 .index_container
   %h2 インフォメーション
 .wrap
   .profile_item
-    - current_user.informations.each do |information| 
+    - current_user.informations.order(created_at: :desc).each do |information|
+    
       = link_to information_path(information) do
         .card
           - if information.eyecatch.attached? 
