@@ -5,7 +5,7 @@
     border: none;
     border-radius: 10px;
     width: 100px;
-    text-align: center;
+    // text-align: center;
     color: rgb(246, 246, 246);
     padding: 5px 5px;
     // margin-r: 20px;
@@ -28,14 +28,17 @@
 
 
 .btn-save {
-  background-color: #f4999d;
+    background-color: #f4999d;
     border: none;
     border-radius: 10px;
-    width: 80%;
+    width: 50%;
     margin: 20px auto;
-    // float: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     color: rgb(246, 246, 246);
     padding: 16px 0;
     font-weight: bold;
-    font-size: 25px;
+    font-size: 20px;
 }
+
