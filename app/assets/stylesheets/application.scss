@@ -64,6 +64,10 @@ body {
   cursor: pointer;
 }
 
+.btn-save {
+  cursor: pointer;
+}
+
 .reply_container {
   cursor: pointer;
 }
@@ -86,7 +90,8 @@ a {
 }
   
 .container {
-   padding: 16px 16px;     
+   padding: 16px 16px;
+   width: 90%;
 }
 
 .field {
