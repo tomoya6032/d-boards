@@ -34,6 +34,7 @@
     }
   }
 
+  
   .trix-button {
     background-color: blue;
     color: white;
@@ -44,4 +45,9 @@
     text-decoration: underline;
   }
 
+}
+
+.trix-button-row {
+  margin-top: 20px;
+  margin-left: 20px;
 }
