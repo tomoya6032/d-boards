@@ -53,7 +53,7 @@
                   %p= chat.author_name
                   %p= chat.display_created_at
 .index_container
-  %h2 インフォメーション
+  %h2 研修等の紹介
 .wrap_profile_information 
   .profile_item
     - current_user.informations.order(created_at: :desc).each do |information|

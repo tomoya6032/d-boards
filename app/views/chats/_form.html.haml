@@ -4,7 +4,7 @@
       %li= message
   = form_with(model: chat, local: true) do |f|
     %div
-      = f.label :content, 'Description'
+      = f.label :content, 'テキスト'
     %div.rich
       = f.rich_text_area :content
     

@@ -1,4 +1,4 @@
-.container
+.information_container
   %ul
     - @information.errors.full_messages.each do |message|
       %li= message
@@ -8,11 +8,11 @@
     %div 
       = f.file_field :eyecatch 
     %div
-      = f.label :title, 'title'
+      = f.label :title, 'タイトル'
     %div
       = f.text_field :title, class: 'text'
     %div
-      = f.label :content, 'Description'
+      = f.label :content, 'テキスト'
     %div
       = f.text_area :content
     

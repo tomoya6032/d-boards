@@ -12,9 +12,9 @@
     %div
       = f.text_field :title, class: 'text'
     %div
-      = f.label :content, '本文'
+      = f.label :content, 'テキスト'
     %div
-      = f.rich_text_area :content
+      = f.rich_text_area :content, class: 'rich_text_area'
     
     = f.submit '保存', class: 'btn-save'
 
