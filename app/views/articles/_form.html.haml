@@ -15,6 +15,8 @@
       = f.label :content, 'テキスト'
     %div
       = f.rich_text_area :content, class: 'rich_text_area'
+    %div
+      = f.file_field :images, multiple: true, id: 'tweet_image', class: 'tweet-image-upload'
     
     = f.submit '保存', class: 'btn-save'
 

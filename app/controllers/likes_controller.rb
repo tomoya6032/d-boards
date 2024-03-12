@@ -6,7 +6,7 @@ class LikesController < ApplicationController
       like_status = current_user.has_liked?(article)
       render json: { hasLiked: like_status }
     end
-
+   
     def create
       article = Article.find(params[:article_id])
       article.likes.create!(user_id: current_user.id)
