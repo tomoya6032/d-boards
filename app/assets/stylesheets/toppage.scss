@@ -72,11 +72,37 @@
     .link_inner {
       display: flex;
       flex-direction: column; 
+      margin: 0;
+      padding: 0;
+
     }
 
     .link_image img {
+        margin-top: 20px;
         width: 100%;
         float: none;
-      }
+        max-height: 150px;
+    }
 
+    /* .link_text 要素の margin-top を 10px に設定 */
+    .link_text {
+        margin-top: 10px;
+        width: 100%;
+    }
+
+    /* .link_text 内の h3 要素の margin を 0 に設定 */
+    .link_text h3 {
+        margin: 0;
+        padding: 0;
+        text-align: center;
+        margin-left: 10px;
+        margin-right: 10px;
+        font-size: 24px;
+    }
+
+    /* .link_text 内の p 要素の margin を 5px に設定 */
+    .link_text p {
+        margin: 5px;
+        font-size: 16px;
+    }
 }

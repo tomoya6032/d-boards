@@ -2,12 +2,22 @@
   .top_container
     %h2 TOPページ
 
+  .section_container
+    = link_to articles_path do
+      .link_inner
+        .link_image
+          = image_tag 'computer_folder.png'
+        .link_text
+          %h3 記録画像
+          %p 災害派遣の活動記録を保管しておくライブラリー
+          %p 内容一覧へ
+
 
   .section_container
     = link_to articles_path do
       .link_inner
         .link_image
-          = image_tag '04_02_004.png'
+          = image_tag 'book_tate.png'
         .link_text
           %h3 記事
           %p 災害時・平時にできることを記事にまとめています
