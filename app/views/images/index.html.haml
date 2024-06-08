@@ -1,0 +1,20 @@
+.images 
+  .images_container
+    .index_container
+      %h2 記録画像一覧
+    -# .tabs
+    -#   = render 'commons/tabs'
+
+    .new_image_container
+      = link_to new_image_path do
+        .image_new
+          %p + 新しい記事を作成
+    .wrap
+      - @images.order(created_at: :desc).each do |image|
+        = render 'commons/image', image: image 
+
+ 
+
+= link_to new_image_path do
+  .float_btn
+    %i.fa.fa-pencil

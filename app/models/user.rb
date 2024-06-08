@@ -5,6 +5,7 @@ class User < ApplicationRecord
            :recoverable, :rememberable, :validatable
   
     has_many :articles, dependent: :destroy
+    has_many :images, dependent: :destroy
     has_many :likes,dependent: :destroy
     has_many :favorites, dependent: :destroy
     has_one :profile, dependent: :destroy
@@ -19,6 +20,7 @@ class User < ApplicationRecord
 
     has_many :follower_relationships, foreign_key: 'following_id', class_name: 'Relationship', dependent: :destroy
     has_many :followers, through: :follower_relationships, source: :follower
+    has_many_attached :images
 
     include Rails.application.routes.url_helpers
 
@@ -41,7 +43,15 @@ class User < ApplicationRecord
     def has_written3?(chat)
       chats.exists?(id: chat.id)
     end
-  
+
+    def has_written4?(image)
+      images.exists?(id: image.id)
+    end
+    
+    def images
+      Image.where(user_id: self.id)
+    end
+
     def has_liked?(article)
       likes.exists?(article_id: article.id)
     end

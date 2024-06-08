@@ -1,0 +1,31 @@
+.image_container
+  %ul
+    - @image.errors.full_messages.each do |message|
+      %li= message
+    = form_with(model: @image, local: true, multipart: true, data: { controller: "images" }) do |f|
+
+      -#   = f.hidden_field :authenticity_token
+
+      .mb-3
+        = f.label :title, "タイトル", class: "font-semibold block p-1"
+        = f.text_field :title, autofocus: true, class: "bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+        %p(data-images-target="error" class="text-red-600")
+
+      .mb-3
+        = f.label :images, "画像", class: "font-semibold block p-1"
+        -# = f.file_field :images
+        = f.file_field :images, multiple: true, accept: "image/jpeg,image/gif,image/png", data: { images_target: "select", action: "change->images#selectImages" }
+        
+        -#   %div{ "data-images-target" => "preview" }
+        -#     - if image.images.attached?
+        -#       - @image.images.each do |image|
+        -#         %div.image-box.inline-flex.mx-1.mb-5{ "data-controller" => "images", "data-images-target" => "image_box" }
+        -#           %div.text-center
+        -#             = image_tag(image, width:100, class: "")
+        -#             %a.link.cursor-pointer{ "data-action" => "click->images#deleteImage" } 削除
+        -#             = f.hidden_field :images, name: "image[images][]", style: "display: none", value: "#{image.blob.id}"
+
+      .mb-3
+        = f.submit "投稿する", class: "btn btn-sky"
+
+

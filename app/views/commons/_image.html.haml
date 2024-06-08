@@ -1,0 +1,12 @@
+.item
+  = link_to image_path(image) do
+    .chat_card
+      .card_detail
+        .div
+          = image_tag image.user.avatar_image 
+        .card_detail_text
+          = truncate(image.title, length: 16, class: "truncate")
+          .chat_display
+            %div
+              %p= image.author_name
+              %p= image.display_created_at

@@ -30,7 +30,10 @@ Rails.application.routes.draw do
   resources :informations do
     resource :like, only: [:create, :destroy]
   end
+
+  resources :images, only: [:index, :new, :show, :edit, :create, :update, :destroy]
   
+
   resources :lectures, only: [:index, :new, :show, :edit, :create, :update, :destroy]
   
   # resources :favorites, only: [:index]
