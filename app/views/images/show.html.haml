@@ -17,11 +17,8 @@
     -#   - @image.images.each do |image|
     .item
       -# = image_tag @image.user.avatar_image #後でアバターが入るようにする
-      
       = image_tag(@image, width:400, class: "image_message")
-      -# = image_tag(image.variant(resize_to_limit: [100, 100]), class: "") = @image.image.variant(resize_to_limit: [400, nil]).url do |url|
       
-
       
     .card-footer
       = link_to '編集する', edit_image_path(@image), class: "btn btn-sm btn-primary"

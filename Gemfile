@@ -4,7 +4,7 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 ruby '3.1.2'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails', branch: 'main'
-gem 'rails', '~> 6.0.5', '>= 6.0.5.1'
+gem 'rails', '~> 6.1'
 # Use postgresql as the database for Active Record
 gem 'pg', '>= 0.18', '< 2.0'
 # Use Puma as the app server
@@ -32,7 +32,7 @@ gem 'aws-sdk-s3', require: false
 gem 'google-analytics-rails'
 gem 'active_decorator'
 gem 'trix'
-gem 'carrierwave', '~> 2.0'
+
 gem 'mini_magick'
 
 # gem 'actiontext'
